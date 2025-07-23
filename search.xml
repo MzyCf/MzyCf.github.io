@@ -54,31 +54,6 @@
     
     
     <entry>
-      <title>我的第一篇文章</title>
-      <link href="/2025/06/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
-      <url>/2025/06/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-      
-        <content type="html"><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><div class="note blue icon-padding flat"><i class="note-icon fas fa-bullhorn"></i><p>此为本博客<strong>第三版</strong>，前两版在本人不懈努力下成了s山，无法推送至github托管，难以修复，遂放弃。</p></div><h1 id="关于难点"><a href="#关于难点" class="headerlink" title="关于难点"></a>关于难点</h1><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>作为网页中最常见的元素之一，图片的添加是必要的。首先尝试使用原生markdown语法插入图片：<br><img src="/img/miku2_1.png" alt="miku2_2"></p><p>尺寸过大，效果不甚理想。由于md文件会被hexo编译为html，尝试使用<code>&lt;img&gt;</code>标签：<br><img src="/img/miku2_1.png" alt="miku2_1" width="80%" /></p><p>此方法可以通过调整width属性手动控制图片大小，但难以控制排版。阅读butterfly主题文档发现，主题允许使用gallery标签外挂图片：</p><div class="gallery-container" data-type="data" data-button="" data-limit="10" data-first="10">    <div class="gallery-items">[{"url":"/img/0831miku.00_03_33_58.Still002.jpg","alt":"","title":""},{"url":"/img/addiction.00_00_13_37.Still001.png","alt":"","title":""},{"url":"/img/miku2_1.png","alt":"","title":""},{"url":"/img/haila.png","alt":"","title":""}]</div>  </div><p>还是作者推荐的好使。</p><p><strong>ps：不是md和html的图怎么又炸了</strong></p><h2 id="主题美化"><a href="#主题美化" class="headerlink" title="主题美化"></a>主题美化</h2><p><strong>Butterfly主题预设了许多接口和开关，可以在_config.yml配置文件中修改以满足个性化需求。</strong></p><p>首先尝试更改默认头像，在博客根目录下创建<code>_config.butterfly.yml</code>文件，将<code>themes/butterfly/source/_config.yml</code>复制进来，hexo读取<code>_config.butterfly.yml</code>的优先级高于主题目录下的<code>_config.yml</code>，可更方便的调整主题配置。<br>依照文档指示，在<code>source</code>目录下创建<code>img</code>文件夹，导入图片，使用<code>img/xxx.jpg</code>的相对路径配置文件，发现无法在本地预览中生效，使用绝对路径<code>/img/xxx.jpg</code>仍不可显示，尝试使用浏览器直接访问图片地址：404，显然无论相对路径和绝对路径都存在问题，未能正确指向<code>img</code>中的图片。<br>观察<code>config</code>中的url路径，发现url: <code>https://MzyCf.github.io/project</code>，由此可知实际图片目录为<code>/project/img</code>，修改图片路径，成功在本地预览中显示。</p><h2 id="Github托管"><a href="#Github托管" class="headerlink" title="Github托管"></a>Github托管</h2><div class="gallery-container" data-type="data" data-button="" data-limit="10" data-first="10">    <div class="gallery-items">[{"url":"/img/Snipaste_2025-06-26_18-34-53.png","alt":"","title":""}]</div>  </div><strong>好消息：典中典坏消息：不会修</strong><p>经检查我的站点根目录是 <code>https://mzycf.github.io/</code>，但本地 <code>_config.yml</code> 里 root设置成了 <code>/project/</code> ，导致生成的资源路径错误，本地访问 <code>localhost:4000/project/</code>，但线上其实是根目录。因此，主题、Hexo 的静态资源（如 <code>/css/index.css</code>、<code>/js/main.js</code>）404，页面就会变成“纯文字无样式”。</p><h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><p>修改url设置如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url: https://mzycf.github.io</span><br><span class="line">root: /</span><br></pre></td></tr></table></figure><p>去掉所有路径下的<code>/project/</code>，确保本地和线上访问的根目录一致。</p><h2 id="更多问题将随持续开发不断更新"><a href="#更多问题将随持续开发不断更新" class="headerlink" title="更多问题将随持续开发不断更新"></a>更多问题将随持续开发不断更新</h2><h1 id="求关注"><a href="#求关注" class="headerlink" title="求关注"></a>求关注</h1><p>Bilibili主页：<a href="https://space.bilibili.com/470223779?spm_id_from=333.1387.0.0">Link Start</a></p><p>以上引用图片均出自本人之手，部分可在b站视频中找到</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 展示页 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> docs </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>洛天依2025「无限共鸣·流光协奏」全息巡回演唱会北京场</title>
       <link href="/2025/06/26/%E6%97%A0%E9%99%90%E5%85%B1%E9%B8%A3%E5%8C%97%E4%BA%AC%E5%9C%BA/"/>
       <url>/2025/06/26/%E6%97%A0%E9%99%90%E5%85%B1%E9%B8%A3%E5%8C%97%E4%BA%AC%E5%9C%BA/</url>
@@ -96,6 +71,31 @@
         <tags>
             
             <tag> imgs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我的第一篇文章</title>
+      <link href="/2025/06/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
+      <url>/2025/06/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><div class="note blue icon-padding flat"><i class="note-icon fas fa-bullhorn"></i><p>此为本博客<strong>第三版</strong>，前两版在本人不懈努力下成了s山，无法推送至github托管，难以修复，遂放弃。</p></div><h1 id="关于难点"><a href="#关于难点" class="headerlink" title="关于难点"></a>关于难点</h1><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>作为网页中最常见的元素之一，图片的添加是必要的。首先尝试使用原生markdown语法插入图片：<br><img src="/img/miku2_1.png" alt="miku2_2"></p><p>尺寸过大，效果不甚理想。由于md文件会被hexo编译为html，尝试使用<code>&lt;img&gt;</code>标签：<br><img src="/img/miku2_1.png" alt="miku2_1" width="80%" /></p><p>此方法可以通过调整width属性手动控制图片大小，但难以控制排版。阅读butterfly主题文档发现，主题允许使用gallery标签外挂图片：</p><div class="gallery-container" data-type="data" data-button="" data-limit="10" data-first="10">    <div class="gallery-items">[{"url":"/img/0831miku.00_03_33_58.Still002.jpg","alt":"","title":""},{"url":"/img/addiction.00_00_13_37.Still001.png","alt":"","title":""},{"url":"/img/miku2_1.png","alt":"","title":""},{"url":"/img/haila.png","alt":"","title":""}]</div>  </div><p>还是作者推荐的好使。</p><p><strong>ps：不是md和html的图怎么又炸了</strong></p><h2 id="主题美化"><a href="#主题美化" class="headerlink" title="主题美化"></a>主题美化</h2><p><strong>Butterfly主题预设了许多接口和开关，可以在_config.yml配置文件中修改以满足个性化需求。</strong></p><p>首先尝试更改默认头像，在博客根目录下创建<code>_config.butterfly.yml</code>文件，将<code>themes/butterfly/source/_config.yml</code>复制进来，hexo读取<code>_config.butterfly.yml</code>的优先级高于主题目录下的<code>_config.yml</code>，可更方便的调整主题配置。<br>依照文档指示，在<code>source</code>目录下创建<code>img</code>文件夹，导入图片，使用<code>img/xxx.jpg</code>的相对路径配置文件，发现无法在本地预览中生效，使用绝对路径<code>/img/xxx.jpg</code>仍不可显示，尝试使用浏览器直接访问图片地址：404，显然无论相对路径和绝对路径都存在问题，未能正确指向<code>img</code>中的图片。<br>观察<code>config</code>中的url路径，发现url: <code>https://MzyCf.github.io/project</code>，由此可知实际图片目录为<code>/project/img</code>，修改图片路径，成功在本地预览中显示。</p><h2 id="Github托管"><a href="#Github托管" class="headerlink" title="Github托管"></a>Github托管</h2><div class="gallery-container" data-type="data" data-button="" data-limit="10" data-first="10">    <div class="gallery-items">[{"url":"/img/Snipaste_2025-06-26_18-34-53.png","alt":"","title":""}]</div>  </div><strong>好消息：典中典坏消息：不会修</strong><p>经检查我的站点根目录是 <code>https://mzycf.github.io/</code>，但本地 <code>_config.yml</code> 里 root设置成了 <code>/project/</code> ，导致生成的资源路径错误，本地访问 <code>localhost:4000/project/</code>，但线上其实是根目录。因此，主题、Hexo 的静态资源（如 <code>/css/index.css</code>、<code>/js/main.js</code>）404，页面就会变成“纯文字无样式”。</p><h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><p>修改url设置如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url: https://mzycf.github.io</span><br><span class="line">root: /</span><br></pre></td></tr></table></figure><p>去掉所有路径下的<code>/project/</code>，确保本地和线上访问的根目录一致。</p><h2 id="更多问题将随持续开发不断更新"><a href="#更多问题将随持续开发不断更新" class="headerlink" title="更多问题将随持续开发不断更新"></a>更多问题将随持续开发不断更新</h2><h1 id="求关注"><a href="#求关注" class="headerlink" title="求关注"></a>求关注</h1><p>Bilibili主页：<a href="https://space.bilibili.com/470223779?spm_id_from=333.1387.0.0">Link Start</a></p><p>以上引用图片均出自本人之手，部分可在b站视频中找到</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 展示页 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docs </tag>
             
         </tags>
       
