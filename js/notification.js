@@ -93,6 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // 测试弹窗功能（5秒后自动触发一次测试）
     setTimeout(function() {
         console.log('测试弹窗功能'); // 调试日志
-        showNotification('测试弹窗', '如果您看到这个弹窗，说明Vue和Element UI已正常工作！');
+        showF12Notification('测试弹窗', '如果您看到这个弹窗，说明Vue和Element UI已正常工作！');
     }, 5000);
 }); 
