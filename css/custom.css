@@ -465,6 +465,12 @@
   color: #66ccff;
 }
 
+.color-66ccff-align {
+  color: #66ccff;
+  align-items: center;
+  justify-content: center;
+}
+
 .matrix-center {
   display: flex;
   justify-content: center;
