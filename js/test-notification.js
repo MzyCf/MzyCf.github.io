@@ -20,7 +20,8 @@ window.addEventListener('load', function() {
                 console.log('Vue实例已挂载');
                 this.$notify({
                     title: '测试成功！',
-                    message: 'Vue和Element UI工作正常',
+                    message: 'Vue和Element UI工作正常，网站已完全加载',
+                    position: 'top-left',
                     type: 'success',
                     duration: 3000
                 });
@@ -42,6 +43,7 @@ setTimeout(function() {
                 this.$notify({
                     title: '延迟测试',
                     message: '5秒后Vue和Element UI正常工作',
+                    position: 'top-left',
                     type: 'info',
                     duration: 3000
                 });
