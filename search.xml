@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>电路与电子技术基础</title>
+      <link href="/2025/09/23/%E7%94%B5%E8%B7%AF%E4%B8%8E%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/"/>
+      <url>/2025/09/23/%E7%94%B5%E8%B7%AF%E4%B8%8E%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-3——电压和电流的参考方向"><a href="#1-3——电压和电流的参考方向" class="headerlink" title="1.3——电压和电流的参考方向"></a>1.3——电压和电流的参考方向</h2><ul><li>参考方向——如何判断电压与电流的参考方向相同或相反</li></ul><p>下图展示了一个基本的电路图，包含电流方向和正负极标记：</p><p><img src="/img/circuit-diagram.svg" alt="电路图"></p><p><strong>电路图说明：</strong></p><ul><li>电流 <code>i</code> 的方向用箭头表示</li><li>电阻用锯齿形符号表示</li><li><code>+</code> 和 <code>−</code> 分别表示正极和负极</li><li>这是分析电压和电流参考方向的基础电路</li></ul><p><strong>备选方案 - 使用Mermaid语法的简化电路图：</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">    A[+] --&gt;|i| B[电阻R]</span><br><span class="line">    B --&gt; C[-]</span><br><span class="line">    A -.电压U.- C</span><br></pre></td></tr></table></figure><p><strong>ASCII艺术版本的电路图：</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> ──────→ i ──────</span><br><span class="line">○                ○</span><br><span class="line">+                -</span><br><span class="line">│                │</span><br><span class="line">└────────────────┘</span><br><span class="line">      期间</span><br></pre></td></tr></table></figure><ul><li><p>欧姆定律</p><ul><li>U、I参考方向相同</li></ul></li></ul><p>$\frac{U}{I}&#x3D;R$</p><ul><li>U、I参考方向相反</li></ul><p>  $$<br>  U&#x3D;-IR<br>  $$</p><ul><li><p>功率计算</p><ul><li><p>参考方向相同</p><p>$$<br>P_吸&#x3D;UI<br>$$</p></li><li><p>参考方向不同</p><p>$$<br>P_吸&#x3D;-IR<br>$$</p></li></ul></li></ul><h2 id="电源的有载工作、开路和短路"><a href="#电源的有载工作、开路和短路" class="headerlink" title="电源的有载工作、开路和短路"></a>电源的有载工作、开路和短路</h2><ul><li><p>电源开路<br>当开关断开时，电源则处于开路（空载）状态<br>开路时的特征：</p><p>$$<br>I&#x3D;0、U&#x3D;U_0&#x3D;E<br>$$</p></li><li><p>电源短路</p><p>当电源两端由于某种原因，连在一起时，电源被短路</p><p>特征：</p><p>$$<br>U&#x3D;0、I&#x3D;I_s&#x3D;\frac{E}{R_0}<br>$$</p></li></ul><h2 id="基尔霍夫定律"><a href="#基尔霍夫定律" class="headerlink" title="基尔霍夫定律"></a>基尔霍夫定律</h2><p><strong>定义：任意时刻电路中任一节点，流入该节点的电流（电压）之和等于流出该节点的电流（电压）之和</strong></p><p>支路——电路中的每一分支</p><p>节点——电路中三条或三条以上的支路连接点</p><h3 id="基尔霍夫电流定律（KCL）"><a href="#基尔霍夫电流定律（KCL）" class="headerlink" title="基尔霍夫电流定律（KCL）"></a>基尔霍夫电流定律（KCL）</h3><p>基尔霍夫电流定律是用来确定连接在同一节点上的各支路电流之间的关系</p><p><strong>定义：在任一瞬间，电路中流向某一节点和流出节点的电流代数和为0</strong></p><p>若以流向节点的电流为负，流出节点的电流为正，根据KCL可知：</p><p>$$<br>I_1-I_2+I_3+I_4&#x3D;0<br>$$</p><h4 id="KCL推广应用"><a href="#KCL推广应用" class="headerlink" title="KCL推广应用"></a>KCL推广应用</h4><p>对A，B，C三个节点应用KCL：</p><p>$$<br>I_A&#x3D;I_{AB}-I_{CA}<br>$$</p><p>$$<br>I_B&#x3D;I_{BC}-I_{AB}<br>$$</p><p>$$<br>I_C&#x3D;I_{CA}-I_{BC}<br>$$</p><p>$$<br>I_A+I_B+I_C&#x3D;0\Rightarrow\sum{I}&#x3D;0<br>$$</p><p>可见，在任一时刻通过任一封闭面的电流的代数和也恒等于零</p><h3 id="基尔霍夫电压定理（KVL）"><a href="#基尔霍夫电压定理（KVL）" class="headerlink" title="基尔霍夫电压定理（KVL）"></a>基尔霍夫电压定理（KVL）</h3><p><strong>定义：在任一瞬间，沿任一回路绕行方向，回路中各段电压的代数和为0</strong></p><p>若规定支路的电压参考方向与绕行方向一致时，支路电压取正值，否则去负值</p><h2 id="电阻"><a href="#电阻" class="headerlink" title="电阻"></a>电阻</h2><h3 id="电阻的串联"><a href="#电阻的串联" class="headerlink" title="电阻的串联"></a>电阻的串联</h3><p><strong>定义：电路中两个或更多个电阻一个接一个地顺序相连，并且在这些电阻中通过同一电流，则这样的连接方法称为电阻的串联</strong></p><p>分压公式：</p><p>$$<br>U_1&#x3D;\frac{R_1}{R_1+R_2}U<br>$$</p><p>$$<br>U_2&#x3D;\frac{R_2}{R_1+R_2}U<br>$$</p><h3 id="电阻的并联"><a href="#电阻的并联" class="headerlink" title="电阻的并联"></a>电阻的并联</h3><p><strong>定义：电路中两个或多个电阻连接在两个公共的节点之间，则这样的连接法称为电阻的并联，在各个并联支路（电阻）上收到同一电压</strong></p><p>分流公式：</p><p>$$<br>I_1&#x3D;\frac{R_1}{R_1+R_2}I<br>$$</p><h2 id="叠加定理"><a href="#叠加定理" class="headerlink" title="叠加定理"></a>叠加定理</h2><p>多个电源共同作用的线性电路中，某一支路的电压（电流）等于有个电源单独作用，在该支路上所产生的电压（电流）的代数和</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 电路 电子技术 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>基于深度学习的python速通(三)</title>
       <link href="/2025/09/14/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E4%B8%89)/"/>
       <url>/2025/09/14/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E4%B8%89)/</url>
