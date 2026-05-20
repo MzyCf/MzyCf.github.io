@@ -1,0 +1,516 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>AI资讯日报 · 2026年5月20日 | Ciallo～(∠・ω&lt; )⌒☆</title><meta name="author" content="丛雨丛雨丛"><meta name="copyright" content="丛雨丛雨丛"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Google I&#x2F;O 2026 余波持续：Gemini 3.5 Flash&#x2F;Omni&#x2F;Antigravity 三件套引爆讨论；AWS MCP Server 正式 GA；MCP 生态日活跃度高涨；Karpathy 加入 Anthropic 持续发酵  核心摘要 **Gemini 3.5 Flash 发布**：Google I&#x2F;O 最强 Agent&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI资讯日报 · 2026年5月20日">
+<meta property="og:url" content="https://mzycf.github.io/2026/05/20/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-05-20/index.html">
+<meta property="og:site_name" content="Ciallo～(∠・ω&lt; )⌒☆">
+<meta property="og:description" content="Google I&#x2F;O 2026 余波持续：Gemini 3.5 Flash&#x2F;Omni&#x2F;Antigravity 三件套引爆讨论；AWS MCP Server 正式 GA；MCP 生态日活跃度高涨；Karpathy 加入 Anthropic 持续发酵  核心摘要 **Gemini 3.5 Flash 发布**：Google I&#x2F;O 最强 Agent&#x2F;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://mzycf.github.io/img/ai-daily-cover.jpg">
+<meta property="article:published_time" content="2026-05-20T00:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-20T11:04:58.199Z">
+<meta property="article:author" content="丛雨丛雨丛">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="资讯">
+<meta property="article:tag" content="日报">
+<meta property="article:tag" content="Google">
+<meta property="article:tag" content="Gemini">
+<meta property="article:tag" content="Agent">
+<meta property="article:tag" content="Anthropic">
+<meta property="article:tag" content="X平台">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mzycf.github.io/img/ai-daily-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AI资讯日报 · 2026年5月20日",
+  "url": "https://mzycf.github.io/2026/05/20/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-05-20/",
+  "image": "https://mzycf.github.io/img/ai-daily-cover.jpg",
+  "datePublished": "2026-05-20T00:00:00.000Z",
+  "dateModified": "2026-05-20T11:04:58.199Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "丛雨丛雨丛",
+      "url": "https://github.com/MzyCf"
+    }
+  ]
+}</script><link rel="shortcut icon" href="https://lstyimgbed.cn/Icon/fv542-wndck-001.ico"><link rel="canonical" href="https://mzycf.github.io/2026/05/20/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-05-20/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/css/lib/font-awesome-6.7.2-all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":-1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'AI资讯日报 · 2026年5月20日',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/universe.css"><link rel="stylesheet" href="/css/lib/element-ui-2.15.6.min.css"><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div class="bg-animation" id="web_bg" style="background-image: url(/img/Luo-8th.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://lstyimgbed.cn/Icon/transparent_100x100.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">20</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 光锥</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/ai-daily-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/img/Murasame-icon.png" alt="Logo"><span class="site-name">Ciallo～(∠・ω&lt; )⌒☆</span></a><a class="nav-page-title" href="/"><span class="site-name">AI资讯日报 · 2026年5月20日</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 光锥</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">AI资讯日报 · 2026年5月20日</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-05-20T00:00:00.000Z" title="发表于 2026-05-20 08:00:00">2026-05-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-05-20T11:04:58.199Z" title="更新于 2026-05-20 19:04:58">2026-05-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%B5%84%E8%AE%AF/">资讯</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">3.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>14分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>Google I&#x2F;O 2026 余波持续：Gemini 3.5 Flash&#x2F;Omni&#x2F;Antigravity 三件套引爆讨论；AWS MCP Server 正式 GA；MCP 生态日活跃度高涨；Karpathy 加入 Anthropic 持续发酵</p>
+</blockquote>
+<h2 id="核心摘要"><a href="#核心摘要" class="headerlink" title="核心摘要"></a>核心摘要</h2><ul>
+<li>**<a href="#gemini-3.5-flash">Gemini 3.5 Flash 发布</a>**：Google I&#x2F;O 最强 Agent&#x2F;Coding 模型，1M 上下文 + 4 级思考模式，速度 4x—12x 领先同类，但价格争议不小</li>
+<li>**<a href="#antigravity">Antigravity 扩展为 Agent 平台</a>**：CLI、SDK、桌面端、Managed Agents API 齐发，93 并行 Agent 12 小时构建操作系统</li>
+<li>**<a href="#gemini-omni">Gemini Omni 首发视频能力</a>**：跨模态视频生成&#x2F;编辑，在 Flow、Shorts 中上线，Got 争议性评价</li>
+<li>**<a href="#aws-mcp">AWS MCP Server 正式 GA</a>**：15,000+ AWS API 可通过 Claude Code 直接调用，基于现有 IAM 凭证</li>
+<li>**<a href="#karpathy">Karpathy 加入 Anthropic</a>**：LLM 前沿研发人才流动最大事件，传闻从事 RSI 与预训练方向</li>
+<li>**<a href="#mcp-ecosystem">MCP 生态持续升温</a>**：自托管沙箱 + MCP 隧道、Agent Safety Checks、10,000+ 公共 MCP 服务器</li>
+</ul>
+<h2 id="模型发布"><a href="#模型发布" class="headerlink" title="模型发布"></a>模型发布</h2><p><span id="gemini-3.5-flash"></span></p>
+<h3 id="Gemini-3-5-Flash：Google-最强-Agent-Coding-模型，1M-上下文-4-级思考模式，速度-4x—12x-领先同类"><a href="#Gemini-3-5-Flash：Google-最强-Agent-Coding-模型，1M-上下文-4-级思考模式，速度-4x—12x-领先同类" class="headerlink" title="Gemini 3.5 Flash：Google 最强 Agent&#x2F;Coding 模型，1M 上下文 + 4 级思考模式，速度 4x—12x 领先同类"></a>Gemini 3.5 Flash：Google 最强 Agent&#x2F;Coding 模型，1M 上下文 + 4 级思考模式，速度 4x—12x 领先同类</h3><p>Google DeepMind 发布 Gemini 3.5 Flash，定位为面向 Agent 与编程的最强模型。1M token 上下文、65K 最大输出、4 级思考模式（minimal&#x2F;low&#x2F;medium&#x2F;high），支持跨轮次”思维保持”。定价 $1.50&#x2F;$9.00 每百万输入&#x2F;输出 token。Demis Hassabis 称其”在 Coding 与 Agent 任务上优于 3.1 Pro，速度 4x 更快，在 Antigravity 中达 12x 更快、800 tok&#x2F;s”。</p>
+<p>第三方评测：Artificial Analysis 评其为速度-智能帕累托前沿领导者（Intelligence Index 55，+9），但运行成本比 Gemini 3 Flash 高 5.5 倍。Arena 排名 #9（1507 分，+70）。社区主要争议在价格——@simonw 指出价格是 3 Flash 的 3 倍，@enricoros 计算比 15 个月前 2.0 Flash 贵 22.5x。</p>
+<p><strong>关键信息</strong>: Google, Gemini 3.5 Flash, Agent, Coding, 1M上下文, 思考模式, 价格争议</p>
+<p><span id="cerebras-kimi"></span></p>
+<h3 id="Cerebras-运行-Kimi-K2-6：万亿参数模型推理速度达-1-000-tok-s，创历史记录"><a href="#Cerebras-运行-Kimi-K2-6：万亿参数模型推理速度达-1-000-tok-s，创历史记录" class="headerlink" title="Cerebras 运行 Kimi K2.6：万亿参数模型推理速度达 1,000 tok&#x2F;s，创历史记录"></a>Cerebras 运行 Kimi K2.6：万亿参数模型推理速度达 1,000 tok&#x2F;s，创历史记录</h3><p>Cerebras 在 enterprise trials 中以约 1,000 tok&#x2F;s 运行万亿参数模型 Kimi K2.6，Artificial Analysis 称为”史上最快的前沿模型性能”。核心创新在内存带宽：模型层跨晶圆切分避免外部内存读取。</p>
+<p><strong>关键信息</strong>: Cerebras, Kimi K2.6, 推理速度, 内存带宽</p>
+<p><span id="carbon-dna"></span></p>
+<h3 id="Hugging-Face-Carbon：DNA-基础模型推理速度超-Evo2-7B-达-275-倍，单-GPU-可处理全基因组"><a href="#Hugging-Face-Carbon：DNA-基础模型推理速度超-Evo2-7B-达-275-倍，单-GPU-可处理全基因组" class="headerlink" title="Hugging Face Carbon：DNA 基础模型推理速度超 Evo2-7B 达 275 倍，单 GPU 可处理全基因组"></a>Hugging Face Carbon：DNA 基础模型推理速度超 Evo2-7B 达 275 倍，单 GPU 可处理全基因组</h3><p>Hugging Face 发布 Carbon 系列基因 DNA 基础模型。Carbon-3B 声称匹配 Evo2-7B 性能，推理速度快 250–275 倍。技术要点：确定性 6-mer tokenization + 分解损失函数（FNS）。</p>
+<p><strong>关键信息</strong>: Hugging Face, Carbon, DNA模型, 基因组, 生物AI</p>
+<h2 id="产品动态"><a href="#产品动态" class="headerlink" title="产品动态"></a>产品动态</h2><p><span id="antigravity"></span></p>
+<h3 id="Antigravity-2-0：从编程助手进化为完整-Agent-平台，93-并行-Agent-12-小时构建完整操作系统"><a href="#Antigravity-2-0：从编程助手进化为完整-Agent-平台，93-并行-Agent-12-小时构建完整操作系统" class="headerlink" title="Antigravity 2.0：从编程助手进化为完整 Agent 平台，93 并行 Agent 12 小时构建完整操作系统"></a>Antigravity 2.0：从编程助手进化为完整 Agent 平台，93 并行 Agent 12 小时构建完整操作系统</h3><p>Google 将 Antigravity 扩展为完整 Agent 执行平台：CLI、SDK、桌面端 2.0、Managed Agents in Gemini API（单 API 调用获得 Agent + Linux 沙箱，支持 Bash&#x2F;Python&#x2F;Node&#x2F;文件&#x2F;浏览器）、Android 支持、AI Studio 一键导出。Managed Agents 暴露 Google 内部使用的托管 Linux 沙箱，支持 repo 挂载和 Markdown 定义技能。核心演示：93 并行子 Agent 12 小时构建完整操作系统，15K+ 次请求、2.6B token、花费不到 $1,000。</p>
+<p>但 agy CLI 不再开源且不支持 ACP 协议，引发社区反弹（via @pvncher&#x2F;@jeremyphoward）。</p>
+<p><strong>关键信息</strong>: Google, Antigravity, Agent平台, 并行Agent, Managed Agents, 开源争议</p>
+<p><span id="gemini-omni"></span></p>
+<h3 id="Gemini-Omni-Flash：跨模态视频生成-编辑首发，角色一致性领先，社区评价两极"><a href="#Gemini-Omni-Flash：跨模态视频生成-编辑首发，角色一致性领先，社区评价两极" class="headerlink" title="Gemini Omni Flash：跨模态视频生成&#x2F;编辑首发，角色一致性领先，社区评价两极"></a>Gemini Omni Flash：跨模态视频生成&#x2F;编辑首发，角色一致性领先，社区评价两极</h3><p>Google DeepMind 发布 Gemini Omni——将 Gemini 推理与世界知识结合生成式媒体，首发视频生成&#x2F;编辑。Omni Flash 已在 Gemini App、Flow、YouTube Shorts 上线，API 数周内提供。Demis Hassabis 称为”世界理解与多模态编辑的重大飞跃”，社区评价两极：有人认为质量大幅提升，也有人批评界面”像 B 级游戏 UI”。</p>
+<p><strong>关键信息</strong>: Google, Gemini Omni, 视频生成, 多模态, 世界模型</p>
+<p><span id="openai-capacity"></span></p>
+<h3 id="OpenAI-Guaranteed-Capacity：推出-1–3-年长期算力预留，应对持续受限的推理容量"><a href="#OpenAI-Guaranteed-Capacity：推出-1–3-年长期算力预留，应对持续受限的推理容量" class="headerlink" title="OpenAI Guaranteed Capacity：推出 1–3 年长期算力预留，应对持续受限的推理容量"></a>OpenAI Guaranteed Capacity：推出 1–3 年长期算力预留，应对持续受限的推理容量</h3><p>OpenAI 推出长期预留算力商业产品，客户签 1–3 年承诺以折扣价格获得保证推理容量。Sam Altman 表示模型越有用、算力越受限。</p>
+<p><strong>关键信息</strong>: OpenAI, 算力预留, 企业定价</p>
+<p><span id="gemini-spark"></span></p>
+<h3 id="Gemini-Spark：Google-24-7-个人-Agent，云端-VM-持续运行，集成-Google-全家桶"><a href="#Gemini-Spark：Google-24-7-个人-Agent，云端-VM-持续运行，集成-Google-全家桶" class="headerlink" title="Gemini Spark：Google 24&#x2F;7 个人 Agent，云端 VM 持续运行，集成 Google 全家桶"></a>Gemini Spark：Google 24&#x2F;7 个人 Agent，云端 VM 持续运行，集成 Google 全家桶</h3><p>Google 推出基于专用云虚拟机的 24&#x2F;7 个人 AI 代理，可在用户关闭电脑后持续后台运行。集成 Docs、Calendar、Slides 等 Google 工具，计划支持 MCP 协议及 macOS 桌面端。（@ammaar: “Meet Gemini Spark, a 24&#x2F;7 personal AI agent”）</p>
+<p><strong>关键信息</strong>: Google, Gemini Spark, 个人Agent, 云端VM, MCP</p>
+<p><span id="aws-mcp"></span></p>
+<h3 id="AWS-MCP-Server-正式-GA：15-000-AWS-API-可在-Claude-Code-中通过-IAM-直接调用"><a href="#AWS-MCP-Server-正式-GA：15-000-AWS-API-可在-Claude-Code-中通过-IAM-直接调用" class="headerlink" title="AWS MCP Server 正式 GA：15,000+ AWS API 可在 Claude Code 中通过 IAM 直接调用"></a>AWS MCP Server 正式 GA：15,000+ AWS API 可在 Claude Code 中通过 IAM 直接调用</h3><p>AWS MCP Server 正式 GA——15,000+ AWS API 现在可从 Claude Code 内部通过现有 IAM 凭证调用，完整 CloudTrail 日志记录，可审计。标志着 IDE 正成为云基础设施的控制平面。（via AI_devs search, 2026-05-20）</p>
+<p><strong>关键信息</strong>: AWS, MCP Server, Claude Code, IAM, CloudTrail</p>
+<h2 id="研究论文"><a href="#研究论文" class="headerlink" title="研究论文"></a>研究论文</h2><p><span id="nanogpt-bench"></span></p>
+<h3 id="NanoGPT-Bench：当前编程-Agent-仅能恢复-9-3-人类-AI-研发进展，算法创新几乎为零"><a href="#NanoGPT-Bench：当前编程-Agent-仅能恢复-9-3-人类-AI-研发进展，算法创新几乎为零" class="headerlink" title="NanoGPT-Bench：当前编程 Agent 仅能恢复 9.3% 人类 AI 研发进展，算法创新几乎为零"></a>NanoGPT-Bench：当前编程 Agent 仅能恢复 9.3% 人类 AI 研发进展，算法创新几乎为零</h3><p>Intology AI 发布基于 NanoGPT Speedrun 的自主 AI 研发基准。Codex、Claude Code、Autoresearch 仅恢复 9.3% 人类进展，主要来自超参数调优而非算法创新。评估全自主、离线运行，限制在 5 个月世界纪录窗口内减少数据污染。</p>
+<p><strong>关键信息</strong>: NanoGPT-Bench, AI研发, Agent评估, 基准测试</p>
+<p><span id="memex"></span></p>
+<h3 id="Databricks-MemEx：可编程-Python-草稿板替代上下文窗口堆砌，准确率提升-成本降-30"><a href="#Databricks-MemEx：可编程-Python-草稿板替代上下文窗口堆砌，准确率提升-成本降-30" class="headerlink" title="Databricks MemEx：可编程 Python 草稿板替代上下文窗口堆砌，准确率提升 + 成本降 30%"></a>Databricks MemEx：可编程 Python 草稿板替代上下文窗口堆砌，准确率提升 + 成本降 30%</h3><p>Databricks 提出 MemEx，在实时内核中保持类型化对象而非填满上下文窗口。前沿模型提升 2–5 准确率点、成本降 25–30%；Qwen 模型准确率近乎翻倍、成本降 40–50%。</p>
+<p><strong>关键信息</strong>: Databricks, MemEx, Agent记忆, 上下文窗口, 成本优化</p>
+<p><span id="rope-limits"></span></p>
+<h3 id="RoPE-位置编码内在局限：长上下文中无法同时区分-token-身份与位置，影响-Agent-检索"><a href="#RoPE-位置编码内在局限：长上下文中无法同时区分-token-身份与位置，影响-Agent-检索" class="headerlink" title="RoPE 位置编码内在局限：长上下文中无法同时区分 token 身份与位置，影响 Agent 检索"></a>RoPE 位置编码内在局限：长上下文中无法同时区分 token 身份与位置，影响 Agent 检索</h3><p>新论文指出 RoPE 在长上下文中的内在限制——无法同时区分 token 身份和位置，对列表索引检索和 Agent 框架设计有直接影响。（@jeremyphoward 转推）</p>
+<p><strong>关键信息</strong>: RoPE, 长上下文, 位置编码, 注意力机制</p>
+<h2 id="工具框架"><a href="#工具框架" class="headerlink" title="工具框架"></a>工具框架</h2><p><span id="qwen3.7"></span></p>
+<h3 id="Qwen3-7-Preview-登-Arena-6-5：社区期待-Coder-与-27B-中等规模变体"><a href="#Qwen3-7-Preview-登-Arena-6-5：社区期待-Coder-与-27B-中等规模变体" class="headerlink" title="Qwen3.7 Preview 登 Arena #6&#x2F;#5：社区期待 Coder 与 27B 中等规模变体"></a>Qwen3.7 Preview 登 Arena #6&#x2F;#5：社区期待 Coder 与 27B 中等规模变体</h3><p>阿里 Qwen 上架 Qwen3.7 Preview（Max&#x2F;Plus 变体），位列 Text #6、Vision #5。社区期待具体模型变体发布，尤其 Coder 系列和 27B 中等规模模型。</p>
+<p><strong>关键信息</strong>: Qwen, 阿里, Arena, 开源模型</p>
+<p><span id="bytedance-lance"></span></p>
+<h3 id="ByteDance-Lance：3B-激活参数统一多模态模型，BAGEL-复合架构实现图像-视频全能力"><a href="#ByteDance-Lance：3B-激活参数统一多模态模型，BAGEL-复合架构实现图像-视频全能力" class="headerlink" title="ByteDance Lance：3B 激活参数统一多模态模型，BAGEL 复合架构实现图像&#x2F;视频全能力"></a>ByteDance Lance：3B 激活参数统一多模态模型，BAGEL 复合架构实现图像&#x2F;视频全能力</h3><p>字节跳动发布 Lance，号称 3B 激活参数，支持图像&#x2F;视频理解、生成和编辑。实际模型文件约 24.7GB（≥40GB VRAM），采用 BAGEL 式复合架构组合 WAN 2.2 + 像素空间图像模型 + Qwen2.5-VL 3B。</p>
+<p><strong>关键信息</strong>: ByteDance, Lance, 多模态, 统一模型, 开源</p>
+<p><span id="gutenberg-cli"></span></p>
+<h3 id="Gutenberg-CLI：将-API-Spec-与流量抓包自动转为-Agent-可用工具，支持-MCP-Skills"><a href="#Gutenberg-CLI：将-API-Spec-与流量抓包自动转为-Agent-可用工具，支持-MCP-Skills" class="headerlink" title="Gutenberg CLI：将 API Spec 与流量抓包自动转为 Agent 可用工具，支持 MCP + Skills"></a>Gutenberg CLI：将 API Spec 与流量抓包自动转为 Agent 可用工具，支持 MCP + Skills</h3><p>Gutenberg CLI 将 API 规范和流量捕捉转化为 Agent 就绪的工具表面（CLI、MCP、Skills、缓存、策略、证明），不是脚手架而是真正的 AI Agent 可用工具层。开源发布。（via AI_devs search, 2026-05-20）</p>
+<p><strong>关键信息</strong>: Gutenberg CLI, MCP, API-to-Tool, 开源, Agent</p>
+<h2 id="行业事件"><a href="#行业事件" class="headerlink" title="行业事件"></a>行业事件</h2><p><span id="karpathy"></span></p>
+<h3 id="Andrej-Karpathy-加入-Anthropic：当日互动最高，将从事-RSI-与预训练方向"><a href="#Andrej-Karpathy-加入-Anthropic：当日互动最高，将从事-RSI-与预训练方向" class="headerlink" title="Andrej Karpathy 加入 Anthropic：当日互动最高，将从事 RSI 与预训练方向"></a>Andrej Karpathy 加入 Anthropic：当日互动最高，将从事 RSI 与预训练方向</h3><p>当日互动最高的 AI 推文。Karpathy：”我觉得 LLM 前沿的下几年将特别有塑造力，很高兴加入团队回归研发。” Axios 等媒体猜测将从事 RSI&#x2F;自动研究和预训练工作。业界普遍解读为 Anthropic 的重大人才胜利。</p>
+<p><strong>关键信息</strong>: Karpathy, Anthropic, 人才流动, LLM研发, RSI</p>
+<p><span id="musk-openai"></span></p>
+<h3 id="Musk-诉-OpenAI-案因时效被驳回：9-人陪审团-2-小时裁决，Musk-将上诉"><a href="#Musk-诉-OpenAI-案因时效被驳回：9-人陪审团-2-小时裁决，Musk-将上诉" class="headerlink" title="Musk 诉 OpenAI 案因时效被驳回：9 人陪审团 2 小时裁决，Musk 将上诉"></a>Musk 诉 OpenAI 案因时效被驳回：9 人陪审团 2 小时裁决，Musk 将上诉</h3><p>联邦陪审团裁定 Musk 诉 OpenAI&#x2F;Sam Altman 案因 3 年诉讼时效已过驳回。9 人陪审团约 2 小时裁决。Musk 称为”日历技术细节”并计划上诉第九巡回法院。</p>
+<p><strong>关键信息</strong>: Musk, OpenAI, 诉讼, 法律</p>
+<p><span id="metr"></span></p>
+<h3 id="METR-首份-Frontier-Risk-Report：深度覆盖四家前沿实验室内部-Agent-失控风险"><a href="#METR-首份-Frontier-Risk-Report：深度覆盖四家前沿实验室内部-Agent-失控风险" class="headerlink" title="METR 首份 Frontier Risk Report：深度覆盖四家前沿实验室内部 Agent 失控风险"></a>METR 首份 Frontier Risk Report：深度覆盖四家前沿实验室内部 Agent 失控风险</h3><p>METR 基于对 Anthropic、Google、Meta、OpenAI 内部模型和信息的深度访问发布首份前沿风险报告，聚焦实验室是否可能失去对内部部署 Agent 的控制。David Rein 透露曾在 Anthropic 进行为期一个月的嵌入式安全演练。</p>
+<p><strong>关键信息</strong>: METR, AI安全, Agent失控风险, 前沿模型</p>
+<h2 id="X平台动态"><a href="#X平台动态" class="headerlink" title="X平台动态"></a>X平台动态</h2><blockquote>
+<p>从追踪的 AI 领域 22 个账号 + #MCP&#x2F;#ClaudeCode 搜索查询中精选当日最有价值的推文，双语展示</p>
+</blockquote>
+<h3 id="Google-I-O-余波：官方与社区反应"><a href="#Google-I-O-余波：官方与社区反应" class="headerlink" title="Google I&#x2F;O 余波：官方与社区反应"></a>Google I&#x2F;O 余波：官方与社区反应</h3><p><strong>@demishassabis</strong>：<a target="_blank" rel="noopener" href="https://x.com/demishassabis/status/2056831486251380783">3.5 Flash 在编码与代理任务上优于 3.1 Pro，速度 4 倍于同类，Antigravity 中加速 12 倍达 800 tok&#x2F;s</a> 🫧 Google DeepMind CEO</p>
+<blockquote>
+<p>Gemini 3.5 Flash 在编码和代理任务上表现优于 3.1 Pro，比同类前沿模型快 4 倍，在 Antigravity 中快 12 倍、每秒 800 token，且成本不到一半。Pro 版本即将到来……</p>
+<p>原文：Gemini 3.5 Flash performs better than 3.1 Pro on coding &amp; agentic tasks, 4x faster than other frontier models, 12x faster in Antigravity, 800 tokens&#x2F;sec, often at less than half the cost. And Pro to come…</p>
+</blockquote>
+<p><strong>@ammaar</strong>：<a target="_blank" rel="noopener" href="https://x.com/ammaar/status/2056838913944424469">AI Studio 发布新能力：直接在 Studio 中构建 Android 应用并一键安装到设备，Workspace 全家桶自动集成</a> 🫧 产品演示</p>
+<blockquote>
+<p>直接在 AI Studio 中构建 Android 应用，一键安装到设备。对 Docs、Sheets 等 Google Workspace 全家桶说句话就能自动生成应用，无需任何密钥配置。</p>
+<p>原文：Build Android apps directly in AI Studio and one click install to your device. Automatically build apps for Google Docs, Sheets, and the rest of Workspace just by asking (no keys needed).</p>
+</blockquote>
+<h3 id="MCP-生态重大发布"><a href="#MCP-生态重大发布" class="headerlink" title="MCP 生态重大发布"></a>MCP 生态重大发布</h3><p><strong>AI_devs</strong>：<a target="_blank" rel="noopener" href="https://x.com/AI_devs/status/2056787294124667293">AWS MCP Server 正式 GA——15,000+ AWS API 可通过 Claude Code 经现有 IAM 凭证直接调用，全程 CloudTrail 审计</a> 🫧 基础设施</p>
+<blockquote>
+<p>AWS MCP Server 刚刚正式发布。15,000 多个 AWS API 现在可以从 Claude Code 内部调用——使用你现有的 IAM（身份与访问管理）凭证，完整 CloudTrail 日志记录。一个工具覆盖整个 AWS 表面，全程可审计。IDE 正在成为云的控制平面。</p>
+<p>原文：AWS MCP Server just went GA. 15,000+ AWS APIs now callable from inside Claude Code — via your existing IAM credentials, full CloudTrail logging. One tool. The entire AWS surface. Auditable. The IDE is becoming the control plane.</p>
+</blockquote>
+<p><strong>AI_devs</strong>：<a target="_blank" rel="noopener" href="https://x.com/AI_devs/status/2056787294124667293">Anthropic 新增自托管沙箱与 MCP 隧道，Claude 代理在用户边界内运行，数据不外传</a> 🫧 架构变革</p>
+<blockquote>
+<p>Anthropic 新增自托管沙箱（self-hosted sandboxes）和 MCP 隧道（MCP Tunnels），将 Claude 的工具访问带入企业系统内部，编排逻辑保留在外部。控制权留在代理循环运行的地方——你不是把数据送出去，而是代理主动来到你的环境中。</p>
+<p>原文：Anthropic adds self hosted sandboxes and MCP Tunnels, shifting Claude’s tool access closer to enterprise systems while leaving orchestration outside. Control sits where the agent loop runs.</p>
+</blockquote>
+<p><strong>AI_devs</strong>：<a target="_blank" rel="noopener" href="https://x.com/AI_devs/status/2056787294124667293">Agent Safety Checks v0.1 上线：代理工具调用前后多层安全检查</a> 🫧 安全工具</p>
+<blockquote>
+<p>Agent Safety Checks（代理安全检查）v0.1 已上线。在 AI 代理调用工具前后进行安全检查。包括：工具调用预演校验器（Tool Call Dry-run Validator）、工具响应净化器（Tool Response Sanitizer）、模式漂移检查器（Schema Drift Checker）、身份范围检查器（Identity Scope Checker）、配额限制检查器（Quota Limit Checker）。</p>
+<p>原文：Agent Safety Checks v0.1 is live. Safety checks before&#x2F;after AI agents call tools. Included: Tool Call Dry-run Validator, Tool Response Sanitizer, Schema Drift Checker, Identity Scope Checker, Quota Limit Checker.</p>
+</blockquote>
+<h3 id="MCP-生态量级与趋势"><a href="#MCP-生态量级与趋势" class="headerlink" title="MCP 生态量级与趋势"></a>MCP 生态量级与趋势</h3><p><strong>AI_devs</strong>：<a target="_blank" rel="noopener" href="https://x.com/AI_devs/status/2056787294124667293">公开 MCP 服务器已超 10,000 个，代理基础设施不再是瓶颈，分发与信任才是</a> 🫧 生态分析</p>
+<blockquote>
+<p>目前已有超过 10,000 个公开 MCP 服务器。Virtuals 刚发布了面向代理收件箱和商业的 EconomyOS。我的判断：代理基础设施不再是瓶颈——分发和信任才是。框架泛滥，需求稀缺。</p>
+<p>原文：10,000+ public MCP servers already exist. Virtuals just shipped EconomyOS for agent inboxes + commerce. My take: agent infra is no longer the bottleneck — distribution and trust are. Frameworks are abundant. Demand is scarce.</p>
+</blockquote>
+<p><strong>AI_devs</strong>：<a target="_blank" rel="noopener" href="https://x.com/AI_devs/status/2056787294124667293">Gutenberg CLI 开源：将 API 规范与流量抓包自动转化为代理可用的工具表面</a> 🫧 开源工具</p>
+<blockquote>
+<p>Gutenberg CLI 将 API 规范（API specs）和流量捕获（traffic captures）转化为代理就绪的工具。CLI、MCP、Skills、缓存、策略、证明——不是脚手架，而是 AI 代理真正能使用的工具表面。</p>
+<p>原文：Gutenberg CLI turns API specs &amp; traffic captures into agent-ready tools. CLI. MCP. Skills. Cache. Policies. Proofs. Not scaffolding. A real tool surface AI agents can use.</p>
+</blockquote>
+<h3 id="企业采用与代理实战"><a href="#企业采用与代理实战" class="headerlink" title="企业采用与代理实战"></a>企业采用与代理实战</h3><p><strong>AI_devs</strong>：<a target="_blank" rel="noopener" href="https://x.com/AI_devs/status/2056787294124667293">Claude 手机端完成真实金融交易：分析 → Bruno MCP → OMS&#x2F;MT5 下单，秒级执行</a> 🫧 金融科技</p>
+<blockquote>
+<p>今天从 Claude 手机端完成了一笔真实交易。Claude + 金融插件 → 分析 → Bruno MCP → Bruno OMS（订单管理系统）&#x2F; MT5。真实账户，秒级完成。这就是我们本周交付的东西。</p>
+<p>原文：Placed a real trade from Claude Mobile today. Claude + finance plugins → analysis → Bruno MCP → Bruno OMS &#x2F; MT5. Real account. Seconds. This is what we shipped this week.</p>
+</blockquote>
+<p><strong>AI_devs</strong>：<a target="_blank" rel="noopener" href="https://x.com/AI_devs/status/2056787294124667293">日立 29 万员工全员引入 Claude，中小企业版也在筹备中</a> 🫧 企业应用</p>
+<blockquote>
+<p>日立全公司 29 万员工引入 Claude，这个导入规模和准备周期完全是另一个量级。很想知道他们内部的指南建设和使用教育体系是如何构建的。中小企业版似乎也要出来了，期待更多实际业务场景的案例。</p>
+<p>原文：日立の全社員29万人がClaude導入。導入規模も準備期間もケタ違い。社内のガイドライン整備や使い方の教育体制、どう作っていくのか気になる。中小企業向けプランも出るみたい。</p>
+</blockquote>
+<p><strong>AI_devs</strong>：<a target="_blank" rel="noopener" href="https://x.com/AI_devs/status/2056787294124667293">AgentVet：为 AI 代理连接器提供独立安全审查，用”验证”替代”信任”</a> 🫧 安全</p>
+<blockquote>
+<p>我们构建了 AgentVet，因为”相信我”不是安全姿态。在 AI 代理连接器部署之前，进行独立的第三方审查验证。</p>
+<p>原文：We built AgentVet because “trust me” isn’t a security posture. Independent vetting for AI agent connectors before deployment.</p>
+</blockquote>
+<h3 id="社区声音"><a href="#社区声音" class="headerlink" title="社区声音"></a>社区声音</h3><p><strong>@jeremyphoward</strong>：<a target="_blank" rel="noopener" href="https://x.com/haopeng_uiuc/status/2056780781930860699">转推论文：RoPE 在长上下文中既无法区分位置也无法区分 token——数学上可证明的局限</a> 🫧 研究信号</p>
+<blockquote>
+<p>RoPE（旋转位置编码）在长上下文中被数学证明既无法区分位置也无法区分 token——这对大模型长文本能力提出了底层质疑。</p>
+<p>原文：RoPE Distinguishes Neither Positions Nor Tokens in Long Contexts, Provably.</p>
+</blockquote>
+<p><strong>@simonw</strong>：<a target="_blank" rel="noopener" href="https://x.com/simonw/status/2056867815605625172">3.5 Flash 价格分析：是上一代 3 Flash 的 3 倍，但 Google 自己会大规模用</a> 🫧 价格分析</p>
+<blockquote>
+<p>我对 Gemini 3.5 Flash 的笔记——价格是 Gemini 3 Flash 的 3 倍，但 Google 计划在自家大量产品中使用它，所以定价策略更复杂。</p>
+<p>原文：My notes on Gemini 3.5 Flash — 3x the price of Gemini 3 Flash but Google are planning to use it for many of their own products.</p>
+</blockquote>
+<h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><p>#GoogleIO #Gemini3.5Flash #Antigravity #MCP #ClaudeCode #AWS #Karpathy #Anthropic #Agent #AgentSafety</p>
+<hr>
+<p>数据来源: smol.ai, X&#x2F;Twitter (twitterapi.io) | 生成时间: 2026-05-21 14:30</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a target="_blank" rel="noopener" href="https://github.com/MzyCf">丛雨丛雨丛</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://mzycf.github.io/2026/05/20/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-05-20/">https://mzycf.github.io/2026/05/20/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-05-20/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://MzyCf.github.io" target="_blank">Ciallo～(∠・ω< )⌒☆</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/AI/">AI</a><a class="post-meta__tags" href="/tags/%E8%B5%84%E8%AE%AF/">资讯</a><a class="post-meta__tags" href="/tags/%E6%97%A5%E6%8A%A5/">日报</a><a class="post-meta__tags" href="/tags/Google/">Google</a><a class="post-meta__tags" href="/tags/Gemini/">Gemini</a><a class="post-meta__tags" href="/tags/Agent/">Agent</a><a class="post-meta__tags" href="/tags/Anthropic/">Anthropic</a><a class="post-meta__tags" href="/tags/X%E5%B9%B3%E5%8F%B0/">X平台</a></div><div class="post-share"><div class="social-share" data-image="/img/ai-daily-cover.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/05/20/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E5%9B%9B)/" title=""><img class="cover" src="/img/miku2_1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2"></div></div><div class="info-2"><div class="info-item-1">张量数组与张量Pytorch将Numpy数组的语法金属吸收，作为自己处理张量的基本语法，且运算速度从使用CPU的数组进步到使用GPU的张量 Numpy和Pytorch的基础语法几乎一致，具体表现为  np对应 torch 数组 array对应张量 tensor Numpy的n维数组对应Pytorch的n阶张量，数组与张量之间可以互相转换 数组 arr转为张量 ts；ts = torch.tensor(arr) 张量 ts转为数组 arr；arr = np.array(ts)  从数组到张量Pytorch修正的Numpy函数或方法    位置 Numpy的函数 Pytorch的函数 用法区别    1.1 数据类型 .astype() .type() 无   2.4 随机数组 np.random.random() troch.rand() 无   2.4 随机数组 np.random.randint() torch.randint() 不接纳一维张量   2.4 随机数组 np.random.normal() torch.normal() 不接受一维张量   2.4 随机数组 np...</div></div></div></a><a class="pagination-related" href="/2026/05/19/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-05-19/" title="AI资讯日报 · 2026年5月19日"><img class="cover" src="/img/ai-daily-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">AI资讯日报 · 2026年5月19日</div></div><div class="info-2"><div class="info-item-1"> Google I&#x2F;O 2026 发布 Gemini 3.5 Flash 与 Omni，Antigravity 成为完整 Agent 平台；Karpathy 加入 Anthropic 引爆社区；OpenAI 推出 Guaranteed Capacity 与 SynthID 水印  核心摘要 **Gemini 3.5 Flash 发布**：Google I&#x2F;O 最强 Agent&#x2F;Coding 模型，1M 上下文 + 4 级思考模式，Arena 排名 #9，速度 4x 领先同类 **Antigravity 扩展为 Agent 平台**：CLI、SDK、桌面端、Managed Agents API 齐发，93 并行 Agent 12 小时构建操作系统 **Gemini Omni 首发视频能力**：跨模态视频生成&#x2F;编辑，在 Flow、Shorts 中上线，角色一致性业界领先 **Karpathy 加入 Anthropic**：当日互动最高推文，回归前沿 LLM 研发，传闻从事 RSI 与预训练方向 **OpenAI Guaranteed Capac...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/05/19/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-05-19/" title="AI资讯日报 · 2026年5月19日"><img class="cover" src="/img/ai-daily-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-19</div><div class="info-item-2">AI资讯日报 · 2026年5月19日</div></div><div class="info-2"><div class="info-item-1"> Google I&#x2F;O 2026 发布 Gemini 3.5 Flash 与 Omni，Antigravity 成为完整 Agent 平台；Karpathy 加入 Anthropic 引爆社区；OpenAI 推出 Guaranteed Capacity 与 SynthID 水印  核心摘要 **Gemini 3.5 Flash 发布**：Google I&#x2F;O 最强 Agent&#x2F;Coding 模型，1M 上下文 + 4 级思考模式，Arena 排名 #9，速度 4x 领先同类 **Antigravity 扩展为 Agent 平台**：CLI、SDK、桌面端、Managed Agents API 齐发，93 并行 Agent 12 小时构建操作系统 **Gemini Omni 首发视频能力**：跨模态视频生成&#x2F;编辑，在 Flow、Shorts 中上线，角色一致性业界领先 **Karpathy 加入 Anthropic**：当日互动最高推文，回归前沿 LLM 研发，传闻从事 RSI 与预训练方向 **OpenAI Guaranteed Capac...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://lstyimgbed.cn/Icon/transparent_100x100.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">丛雨丛雨丛</div><div class="author-info-description">柚子厨老窝</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">20</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/MzyCf"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/MzyCf" target="_blank" title="Github"><i class="fa-brands fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://github.com/MzyCf" target="_blank" title="Wechat"><i class="fa-brands fa-weixin" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/470223779" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">本站于2025/07/24正式拥有自己的域名啦8(*°▽°*) <div class="color-66ccff">https://luoshuitianyi.love</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%91%98%E8%A6%81"><span class="toc-number">1.</span> <span class="toc-text">核心摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83"><span class="toc-number">2.</span> <span class="toc-text">模型发布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Gemini-3-5-Flash%EF%BC%9AGoogle-%E6%9C%80%E5%BC%BA-Agent-Coding-%E6%A8%A1%E5%9E%8B%EF%BC%8C1M-%E4%B8%8A%E4%B8%8B%E6%96%87-4-%E7%BA%A7%E6%80%9D%E8%80%83%E6%A8%A1%E5%BC%8F%EF%BC%8C%E9%80%9F%E5%BA%A6-4x%E2%80%9412x-%E9%A2%86%E5%85%88%E5%90%8C%E7%B1%BB"><span class="toc-number">2.1.</span> <span class="toc-text">Gemini 3.5 Flash：Google 最强 Agent&#x2F;Coding 模型，1M 上下文 + 4 级思考模式，速度 4x—12x 领先同类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cerebras-%E8%BF%90%E8%A1%8C-Kimi-K2-6%EF%BC%9A%E4%B8%87%E4%BA%BF%E5%8F%82%E6%95%B0%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86%E9%80%9F%E5%BA%A6%E8%BE%BE-1-000-tok-s%EF%BC%8C%E5%88%9B%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95"><span class="toc-number">2.2.</span> <span class="toc-text">Cerebras 运行 Kimi K2.6：万亿参数模型推理速度达 1,000 tok&#x2F;s，创历史记录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hugging-Face-Carbon%EF%BC%9ADNA-%E5%9F%BA%E7%A1%80%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86%E9%80%9F%E5%BA%A6%E8%B6%85-Evo2-7B-%E8%BE%BE-275-%E5%80%8D%EF%BC%8C%E5%8D%95-GPU-%E5%8F%AF%E5%A4%84%E7%90%86%E5%85%A8%E5%9F%BA%E5%9B%A0%E7%BB%84"><span class="toc-number">2.3.</span> <span class="toc-text">Hugging Face Carbon：DNA 基础模型推理速度超 Evo2-7B 达 275 倍，单 GPU 可处理全基因组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%A7%E5%93%81%E5%8A%A8%E6%80%81"><span class="toc-number">3.</span> <span class="toc-text">产品动态</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Antigravity-2-0%EF%BC%9A%E4%BB%8E%E7%BC%96%E7%A8%8B%E5%8A%A9%E6%89%8B%E8%BF%9B%E5%8C%96%E4%B8%BA%E5%AE%8C%E6%95%B4-Agent-%E5%B9%B3%E5%8F%B0%EF%BC%8C93-%E5%B9%B6%E8%A1%8C-Agent-12-%E5%B0%8F%E6%97%B6%E6%9E%84%E5%BB%BA%E5%AE%8C%E6%95%B4%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-number">3.1.</span> <span class="toc-text">Antigravity 2.0：从编程助手进化为完整 Agent 平台，93 并行 Agent 12 小时构建完整操作系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gemini-Omni-Flash%EF%BC%9A%E8%B7%A8%E6%A8%A1%E6%80%81%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90-%E7%BC%96%E8%BE%91%E9%A6%96%E5%8F%91%EF%BC%8C%E8%A7%92%E8%89%B2%E4%B8%80%E8%87%B4%E6%80%A7%E9%A2%86%E5%85%88%EF%BC%8C%E7%A4%BE%E5%8C%BA%E8%AF%84%E4%BB%B7%E4%B8%A4%E6%9E%81"><span class="toc-number">3.2.</span> <span class="toc-text">Gemini Omni Flash：跨模态视频生成&#x2F;编辑首发，角色一致性领先，社区评价两极</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OpenAI-Guaranteed-Capacity%EF%BC%9A%E6%8E%A8%E5%87%BA-1%E2%80%933-%E5%B9%B4%E9%95%BF%E6%9C%9F%E7%AE%97%E5%8A%9B%E9%A2%84%E7%95%99%EF%BC%8C%E5%BA%94%E5%AF%B9%E6%8C%81%E7%BB%AD%E5%8F%97%E9%99%90%E7%9A%84%E6%8E%A8%E7%90%86%E5%AE%B9%E9%87%8F"><span class="toc-number">3.3.</span> <span class="toc-text">OpenAI Guaranteed Capacity：推出 1–3 年长期算力预留，应对持续受限的推理容量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gemini-Spark%EF%BC%9AGoogle-24-7-%E4%B8%AA%E4%BA%BA-Agent%EF%BC%8C%E4%BA%91%E7%AB%AF-VM-%E6%8C%81%E7%BB%AD%E8%BF%90%E8%A1%8C%EF%BC%8C%E9%9B%86%E6%88%90-Google-%E5%85%A8%E5%AE%B6%E6%A1%B6"><span class="toc-number">3.4.</span> <span class="toc-text">Gemini Spark：Google 24&#x2F;7 个人 Agent，云端 VM 持续运行，集成 Google 全家桶</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AWS-MCP-Server-%E6%AD%A3%E5%BC%8F-GA%EF%BC%9A15-000-AWS-API-%E5%8F%AF%E5%9C%A8-Claude-Code-%E4%B8%AD%E9%80%9A%E8%BF%87-IAM-%E7%9B%B4%E6%8E%A5%E8%B0%83%E7%94%A8"><span class="toc-number">3.5.</span> <span class="toc-text">AWS MCP Server 正式 GA：15,000+ AWS API 可在 Claude Code 中通过 IAM 直接调用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%94%E7%A9%B6%E8%AE%BA%E6%96%87"><span class="toc-number">4.</span> <span class="toc-text">研究论文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#NanoGPT-Bench%EF%BC%9A%E5%BD%93%E5%89%8D%E7%BC%96%E7%A8%8B-Agent-%E4%BB%85%E8%83%BD%E6%81%A2%E5%A4%8D-9-3-%E4%BA%BA%E7%B1%BB-AI-%E7%A0%94%E5%8F%91%E8%BF%9B%E5%B1%95%EF%BC%8C%E7%AE%97%E6%B3%95%E5%88%9B%E6%96%B0%E5%87%A0%E4%B9%8E%E4%B8%BA%E9%9B%B6"><span class="toc-number">4.1.</span> <span class="toc-text">NanoGPT-Bench：当前编程 Agent 仅能恢复 9.3% 人类 AI 研发进展，算法创新几乎为零</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Databricks-MemEx%EF%BC%9A%E5%8F%AF%E7%BC%96%E7%A8%8B-Python-%E8%8D%89%E7%A8%BF%E6%9D%BF%E6%9B%BF%E4%BB%A3%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AA%97%E5%8F%A3%E5%A0%86%E7%A0%8C%EF%BC%8C%E5%87%86%E7%A1%AE%E7%8E%87%E6%8F%90%E5%8D%87-%E6%88%90%E6%9C%AC%E9%99%8D-30"><span class="toc-number">4.2.</span> <span class="toc-text">Databricks MemEx：可编程 Python 草稿板替代上下文窗口堆砌，准确率提升 + 成本降 30%</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RoPE-%E4%BD%8D%E7%BD%AE%E7%BC%96%E7%A0%81%E5%86%85%E5%9C%A8%E5%B1%80%E9%99%90%EF%BC%9A%E9%95%BF%E4%B8%8A%E4%B8%8B%E6%96%87%E4%B8%AD%E6%97%A0%E6%B3%95%E5%90%8C%E6%97%B6%E5%8C%BA%E5%88%86-token-%E8%BA%AB%E4%BB%BD%E4%B8%8E%E4%BD%8D%E7%BD%AE%EF%BC%8C%E5%BD%B1%E5%93%8D-Agent-%E6%A3%80%E7%B4%A2"><span class="toc-number">4.3.</span> <span class="toc-text">RoPE 位置编码内在局限：长上下文中无法同时区分 token 身份与位置，影响 Agent 检索</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E6%A1%86%E6%9E%B6"><span class="toc-number">5.</span> <span class="toc-text">工具框架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Qwen3-7-Preview-%E7%99%BB-Arena-6-5%EF%BC%9A%E7%A4%BE%E5%8C%BA%E6%9C%9F%E5%BE%85-Coder-%E4%B8%8E-27B-%E4%B8%AD%E7%AD%89%E8%A7%84%E6%A8%A1%E5%8F%98%E4%BD%93"><span class="toc-number">5.1.</span> <span class="toc-text">Qwen3.7 Preview 登 Arena #6&#x2F;#5：社区期待 Coder 与 27B 中等规模变体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ByteDance-Lance%EF%BC%9A3B-%E6%BF%80%E6%B4%BB%E5%8F%82%E6%95%B0%E7%BB%9F%E4%B8%80%E5%A4%9A%E6%A8%A1%E6%80%81%E6%A8%A1%E5%9E%8B%EF%BC%8CBAGEL-%E5%A4%8D%E5%90%88%E6%9E%B6%E6%9E%84%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F-%E8%A7%86%E9%A2%91%E5%85%A8%E8%83%BD%E5%8A%9B"><span class="toc-number">5.2.</span> <span class="toc-text">ByteDance Lance：3B 激活参数统一多模态模型，BAGEL 复合架构实现图像&#x2F;视频全能力</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gutenberg-CLI%EF%BC%9A%E5%B0%86-API-Spec-%E4%B8%8E%E6%B5%81%E9%87%8F%E6%8A%93%E5%8C%85%E8%87%AA%E5%8A%A8%E8%BD%AC%E4%B8%BA-Agent-%E5%8F%AF%E7%94%A8%E5%B7%A5%E5%85%B7%EF%BC%8C%E6%94%AF%E6%8C%81-MCP-Skills"><span class="toc-number">5.3.</span> <span class="toc-text">Gutenberg CLI：将 API Spec 与流量抓包自动转为 Agent 可用工具，支持 MCP + Skills</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%8C%E4%B8%9A%E4%BA%8B%E4%BB%B6"><span class="toc-number">6.</span> <span class="toc-text">行业事件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Andrej-Karpathy-%E5%8A%A0%E5%85%A5-Anthropic%EF%BC%9A%E5%BD%93%E6%97%A5%E4%BA%92%E5%8A%A8%E6%9C%80%E9%AB%98%EF%BC%8C%E5%B0%86%E4%BB%8E%E4%BA%8B-RSI-%E4%B8%8E%E9%A2%84%E8%AE%AD%E7%BB%83%E6%96%B9%E5%90%91"><span class="toc-number">6.1.</span> <span class="toc-text">Andrej Karpathy 加入 Anthropic：当日互动最高，将从事 RSI 与预训练方向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Musk-%E8%AF%89-OpenAI-%E6%A1%88%E5%9B%A0%E6%97%B6%E6%95%88%E8%A2%AB%E9%A9%B3%E5%9B%9E%EF%BC%9A9-%E4%BA%BA%E9%99%AA%E5%AE%A1%E5%9B%A2-2-%E5%B0%8F%E6%97%B6%E8%A3%81%E5%86%B3%EF%BC%8CMusk-%E5%B0%86%E4%B8%8A%E8%AF%89"><span class="toc-number">6.2.</span> <span class="toc-text">Musk 诉 OpenAI 案因时效被驳回：9 人陪审团 2 小时裁决，Musk 将上诉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#METR-%E9%A6%96%E4%BB%BD-Frontier-Risk-Report%EF%BC%9A%E6%B7%B1%E5%BA%A6%E8%A6%86%E7%9B%96%E5%9B%9B%E5%AE%B6%E5%89%8D%E6%B2%BF%E5%AE%9E%E9%AA%8C%E5%AE%A4%E5%86%85%E9%83%A8-Agent-%E5%A4%B1%E6%8E%A7%E9%A3%8E%E9%99%A9"><span class="toc-number">6.3.</span> <span class="toc-text">METR 首份 Frontier Risk Report：深度覆盖四家前沿实验室内部 Agent 失控风险</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#X%E5%B9%B3%E5%8F%B0%E5%8A%A8%E6%80%81"><span class="toc-number">7.</span> <span class="toc-text">X平台动态</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Google-I-O-%E4%BD%99%E6%B3%A2%EF%BC%9A%E5%AE%98%E6%96%B9%E4%B8%8E%E7%A4%BE%E5%8C%BA%E5%8F%8D%E5%BA%94"><span class="toc-number">7.1.</span> <span class="toc-text">Google I&#x2F;O 余波：官方与社区反应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MCP-%E7%94%9F%E6%80%81%E9%87%8D%E5%A4%A7%E5%8F%91%E5%B8%83"><span class="toc-number">7.2.</span> <span class="toc-text">MCP 生态重大发布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MCP-%E7%94%9F%E6%80%81%E9%87%8F%E7%BA%A7%E4%B8%8E%E8%B6%8B%E5%8A%BF"><span class="toc-number">7.3.</span> <span class="toc-text">MCP 生态量级与趋势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%81%E4%B8%9A%E9%87%87%E7%94%A8%E4%B8%8E%E4%BB%A3%E7%90%86%E5%AE%9E%E6%88%98"><span class="toc-number">7.4.</span> <span class="toc-text">企业采用与代理实战</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BE%E5%8C%BA%E5%A3%B0%E9%9F%B3"><span class="toc-number">7.5.</span> <span class="toc-text">社区声音</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D"><span class="toc-number">8.</span> <span class="toc-text">关键词</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/05/20/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E5%9B%9B)/" title="无标题"><img src="/img/miku2_1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无标题"/></a><div class="content"><a class="title" href="/2026/05/20/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E5%9B%9B)/" title="无标题">无标题</a><time datetime="2026-05-20T00:16:29.883Z" title="发表于 2026-05-20 08:16:29">2026-05-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/05/20/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-05-20/" title="AI资讯日报 · 2026年5月20日"><img src="/img/ai-daily-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AI资讯日报 · 2026年5月20日"/></a><div class="content"><a class="title" href="/2026/05/20/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-05-20/" title="AI资讯日报 · 2026年5月20日">AI资讯日报 · 2026年5月20日</a><time datetime="2026-05-20T00:00:00.000Z" title="发表于 2026-05-20 08:00:00">2026-05-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/05/19/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-05-19/" title="AI资讯日报 · 2026年5月19日"><img src="/img/ai-daily-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AI资讯日报 · 2026年5月19日"/></a><div class="content"><a class="title" href="/2026/05/19/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-05-19/" title="AI资讯日报 · 2026年5月19日">AI资讯日报 · 2026年5月19日</a><time datetime="2026-05-19T00:00:00.000Z" title="发表于 2026-05-19 08:00:00">2026-05-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/17/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E5%85%AB)/" title="基于深度学习的python速通(六)-与学习相关的技巧"><img src="https://lstyimgbed.cn/PicGo/cover-6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于深度学习的python速通(六)-与学习相关的技巧"/></a><div class="content"><a class="title" href="/2025/11/17/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E5%85%AB)/" title="基于深度学习的python速通(六)-与学习相关的技巧">基于深度学习的python速通(六)-与学习相关的技巧</a><time datetime="2025-11-17T04:20:00.000Z" title="发表于 2025-11-17 12:20:00">2025-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/17/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E4%B8%83)/" title="基于深度学习的python速通(七)"><img src="https://lstyimgbed.cn/PicGo/cover-5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于深度学习的python速通(七)"/></a><div class="content"><a class="title" href="/2025/11/17/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E4%B8%83)/" title="基于深度学习的python速通(七)">基于深度学习的python速通(七)</a><time datetime="2025-11-17T04:00:00.000Z" title="发表于 2025-11-17 12:00:00">2025-11-17</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2019 - 2026 By 丛雨丛雨丛</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+  const loadMathjax = () => {
+    if (!window.MathJax) {
+      window.MathJax = {
+        loader: {
+          load: [
+            // Four font extension packages (optional)
+            //- '[tex]/bbm',
+            //- '[tex]/bboldx',
+            //- '[tex]/dsfont',
+            '[tex]/mhchem'
+          ],
+          paths: {
+            'mathjax-newcm': '[mathjax]/../@mathjax/mathjax-newcm-font',
+
+            //- // Four font extension packages (optional)
+            //- 'mathjax-bbm-extension': '[mathjax]/../@mathjax/mathjax-bbm-font-extension',
+            //- 'mathjax-bboldx-extension': '[mathjax]/../@mathjax/mathjax-bboldx-font-extension',
+            //- 'mathjax-dsfont-extension': '[mathjax]/../@mathjax/mathjax-dsfont-font-extension',
+            'mathjax-mhchem-extension': '[mathjax]/../@mathjax/mathjax-mhchem-font-extension'
+          }
+        },
+        output: {
+          font: 'mathjax-newcm',
+        },
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          tags: 'none',
+          packages: {
+            '[+]': [
+              'mhchem'
+            ]
+          }
+        },
+        chtml: {
+          scale: 1.1
+        },
+        options: {
+          enableMenu: true,
+          menuOptions: {
+            settings: {
+              enrich: false  // Turn off Braille and voice narration text automatic generation
+            }
+          },
+          renderActions: {
+            findScript: [10, doc => {
+              for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+                const display = !!node.type.match(/; *mode=display/)
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+                const text = document.createTextNode('')
+                node.parentNode.replaceChild(text, node)
+                math.start = {node: text, delim: '', n: 0}
+                math.end = {node: text, delim: '', n: 0}
+                doc.math.push(math)
+              }
+            }, '']
+          }
+        }
+      }
+
+      const script = document.createElement('script')
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax/tex-mml-chtml.min.js'
+      script.id = 'MathJax-script'
+      script.async = true
+      document.head.appendChild(script)
+    } else {
+      MathJax.startup.document.state(0)
+      MathJax.texReset()
+      MathJax.typesetPromise()
+    }
+  }
+
+  btf.addGlobalFn('encrypt', loadMathjax, 'mathjax')
+  window.pjax ? loadMathjax() : window.addEventListener('load', loadMathjax)
+})()</script></div><canvas id="universe"></canvas><script defer src="/js/universe.js"></script><script async src="/js/lib/pace-1.2.4.min.js"></script><script src="/js/lib/vue-2.6.14.min.js"></script><script src="/js/lib/element-ui-2.15.6.min.js"></script><script defer src="/js/notification.js"></script><script defer src="/js/test-notification.js"></script><script src="/js/sun_moon.js" async></script><script defer src="/js/lib/sweetalert2-8.19.0.min.js"></script><script defer src="/js/lunar.js"></script><script defer src="/js/day.js"></script><script defer src="/js/randomdoc.js"></script><script src="/js/lib/jquery-3.7.1.min.js"></script><script type="text/javascript" src="/js/rightmenu.js"></script><script defer src="/js/runtime.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      true
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="什么都搜得到哦" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(/img/shanchahua.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/资讯/&quot;);" href="javascript:void(0);">资讯</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr">任务罢了</span></li><li class="categoryBar-list-item" style="background:url(/img/juhua.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/挖坑/&quot;);" href="javascript:void(0);">挖坑</a><span class="categoryBar-list-count">7</span><span class="categoryBar-list-descr">精装修的记录就在这里啦</span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/记录/&quot;);" href="javascript:void(0);">记录</a><span class="categoryBar-list-count">7</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/推一辈子中v好吗/&quot;);" href="javascript:void(0);">推一辈子中v好吗</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/展示页/&quot;);" href="javascript:void(0);">展示页</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/电子技术/&quot;);" href="javascript:void(0);">电子技术</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/11/17/基于深度学习的python(八)/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/cover-6.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-11-17</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/11/17/基于深度学习的python(八)/&quot;);" href="javascript:void(0);" alt="">基于深度学习的python速通(六)-与学习相关的技巧</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/11/17/基于深度学习的python(八)/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/11/17/基于深度学习的python(七)/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/cover-5.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-11-17</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/11/17/基于深度学习的python(七)/&quot;);" href="javascript:void(0);" alt="">基于深度学习的python速通(七)</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/11/17/基于深度学习的python(七)/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/01/27/基于深度学习的python(六)/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/cover-3.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-01-27</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/01/27/基于深度学习的python(六)/&quot;);" href="javascript:void(0);" alt="">基于深度学习的python速通(六)</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/01/27/基于深度学习的python(六)/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/08/15/娜迦Agent/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/luo-ling.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-08-15</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/08/15/娜迦Agent/&quot;);" href="javascript:void(0);" alt="">娜迦Agent</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/08/15/娜迦Agent/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/01/27/基于深度学习的python(五)/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/cover-2.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-01-27</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/01/27/基于深度学习的python(五)/&quot;);" href="javascript:void(0);" alt="">基于深度学习的python速通(五)</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/01/27/基于深度学习的python(五)/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/06/27/web前端开发实验记录/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/miku2_1.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-06-27</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/06/27/web前端开发实验记录/&quot;);" href="javascript:void(0);" alt="">web前端开发实验记录</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/06/27/web前端开发实验记录/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/06/27/窝点精装修记录/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/addiction.00_00_13_37.Still001.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-06-27</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/06/27/窝点精装修记录/&quot;);" href="javascript:void(0);" alt="">窝点精装修记录</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/06/27/窝点精装修记录/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/09/08/python程序设计/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/Luo.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-09-08</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/09/08/python程序设计/&quot;);" href="javascript:void(0);" alt="">python程序设计</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/09/08/python程序设计/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/09/08/基于深度学习的python(一)/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/cover-1.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-09-08</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/09/08/基于深度学习的python(一)/&quot;);" href="javascript:void(0);" alt="">基于深度学习的python速通(一)</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/09/08/基于深度学习的python(一)/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/08/15/计算机图形学/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/ling-luo.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-08-15</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/08/15/计算机图形学/&quot;);" href="javascript:void(0);" alt="">N天慢通计算机图形学</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/08/15/计算机图形学/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/06/26/我的第一篇文章/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/0831miku.00_03_33_58.Still002.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-06-26</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/06/26/我的第一篇文章/&quot;);" href="javascript:void(0);" alt="">我的第一篇文章</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/06/26/我的第一篇文章/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/06/26/无限共鸣北京场/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/QQ图片20250722230353.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-06-26</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/06/26/无限共鸣北京场/&quot;);" href="javascript:void(0);" alt="">洛天依2025「无限共鸣·流光协奏」全息巡回演唱会北京场</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/06/26/无限共鸣北京场/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/08/15/Hexo-LaTeX支持方案/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/ling-luo.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-08-15</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/08/15/Hexo-LaTeX支持方案/&quot;);" href="javascript:void(0);" alt="">Hexo 框架 LaTeX 数学公式支持解决方案</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/08/15/Hexo-LaTeX支持方案/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__fadeIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '500ms');
+    arr[i].setAttribute('data-wow-offset', '100');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__fadeIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('pagination');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__fadeIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><!-- hexo injector body_end end --></body></html>

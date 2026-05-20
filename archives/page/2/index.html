@@ -1,0 +1,359 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>光锥 | Ciallo～(∠・ω&lt; )⌒☆</title><meta name="author" content="丛雨丛雨丛"><meta name="copyright" content="丛雨丛雨丛"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="柚子厨老窝">
+<meta property="og:type" content="website">
+<meta property="og:title" content="光锥">
+<meta property="og:url" content="https://mzycf.github.io/archives/page/2/index.html">
+<meta property="og:site_name" content="Ciallo～(∠・ω&lt; )⌒☆">
+<meta property="og:description" content="柚子厨老窝">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lstyimgbed.cn/Icon/transparent_100x100.png">
+<meta property="article:author" content="丛雨丛雨丛">
+<meta property="article:tag" content="柚子厨老窝">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lstyimgbed.cn/Icon/transparent_100x100.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="https://lstyimgbed.cn/Icon/fv542-wndck-001.ico"><link rel="canonical" href="https://mzycf.github.io/archives/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/css/lib/font-awesome-6.7.2-all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":-1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '光锥',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'archive'
+}</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/universe.css"><link rel="stylesheet" href="/css/lib/element-ui-2.15.6.min.css"><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div class="bg-animation" id="web_bg" style="background-image: url(/img/Luo-8th.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://lstyimgbed.cn/Icon/transparent_100x100.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">20</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 光锥</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/img/Murasame-icon.png" alt="Logo"><span class="site-name">Ciallo～(∠・ω&lt; )⌒☆</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 光锥</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">光锥</h1></div></header><main class="layout" id="content-inner"><div id="archive"><div class="article-sort-title">全部文章 - 20</div><div class="article-sort"><div class="article-sort-item year">2025</div><div class="article-sort-item"><a class="article-sort-item-img" href="/2025/09/08/python%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" title="python程序设计"><img src="https://lstyimgbed.cn/PicGo/Luo.jpg" alt="python程序设计" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-09-08T06:00:00.000Z" title="发表于 2025-09-08 14:00:00">2025-09-08</time></div><a class="article-sort-item-title" href="/2025/09/08/python%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" title="python程序设计">python程序设计</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2025/08/15/Hexo-LaTeX%E6%94%AF%E6%8C%81%E6%96%B9%E6%A1%88/" title="Hexo 框架 LaTeX 数学公式支持解决方案"><img src="https://lstyimgbed.cn/PicGo/ling-luo.jpg" alt="Hexo 框架 LaTeX 数学公式支持解决方案" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-08-15T09:34:53.000Z" title="发表于 2025-08-15 17:34:53">2025-08-15</time></div><a class="article-sort-item-title" href="/2025/08/15/Hexo-LaTeX%E6%94%AF%E6%8C%81%E6%96%B9%E6%A1%88/" title="Hexo 框架 LaTeX 数学公式支持解决方案">Hexo 框架 LaTeX 数学公式支持解决方案</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2025/08/15/%E5%A8%9C%E8%BF%A6Agent/" title="娜迦Agent"><img src="https://lstyimgbed.cn/PicGo/luo-ling.jpg" alt="娜迦Agent" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-08-15T09:34:53.000Z" title="发表于 2025-08-15 17:34:53">2025-08-15</time></div><a class="article-sort-item-title" href="/2025/08/15/%E5%A8%9C%E8%BF%A6Agent/" title="娜迦Agent">娜迦Agent</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2025/08/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/" title="N天慢通计算机图形学"><img src="https://lstyimgbed.cn/PicGo/ling-luo.jpg" alt="N天慢通计算机图形学" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-08-15T09:34:53.000Z" title="发表于 2025-08-15 17:34:53">2025-08-15</time></div><a class="article-sort-item-title" href="/2025/08/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/" title="N天慢通计算机图形学">N天慢通计算机图形学</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2025/06/27/web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95/" title="web前端开发实验记录"><img src="/img/miku2_1.png" alt="web前端开发实验记录" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-06-27T09:34:53.000Z" title="发表于 2025-06-27 17:34:53">2025-06-27</time></div><a class="article-sort-item-title" href="/2025/06/27/web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95/" title="web前端开发实验记录">web前端开发实验记录</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2025/06/27/%E7%AA%9D%E7%82%B9%E7%B2%BE%E8%A3%85%E4%BF%AE%E8%AE%B0%E5%BD%95/" title="窝点精装修记录"><img src="/img/addiction.00_00_13_37.Still001.png" alt="窝点精装修记录" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-06-27T09:34:53.000Z" title="发表于 2025-06-27 17:34:53">2025-06-27</time></div><a class="article-sort-item-title" href="/2025/06/27/%E7%AA%9D%E7%82%B9%E7%B2%BE%E8%A3%85%E4%BF%AE%E8%AE%B0%E5%BD%95/" title="窝点精装修记录">窝点精装修记录</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2025/06/26/%E6%97%A0%E9%99%90%E5%85%B1%E9%B8%A3%E5%8C%97%E4%BA%AC%E5%9C%BA/" title="洛天依2025「无限共鸣·流光协奏」全息巡回演唱会北京场"><img src="https://lstyimgbed.cn/PicGo/QQ图片20250722230353.jpg" alt="洛天依2025「无限共鸣·流光协奏」全息巡回演唱会北京场" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-06-26T09:34:53.000Z" title="发表于 2025-06-26 17:34:53">2025-06-26</time></div><a class="article-sort-item-title" href="/2025/06/26/%E6%97%A0%E9%99%90%E5%85%B1%E9%B8%A3%E5%8C%97%E4%BA%AC%E5%9C%BA/" title="洛天依2025「无限共鸣·流光协奏」全息巡回演唱会北京场">洛天依2025「无限共鸣·流光协奏」全息巡回演唱会北京场</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2025/06/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" title="我的第一篇文章"><img src="/img/0831miku.00_03_33_58.Still002.jpg" alt="我的第一篇文章" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-06-26T09:34:53.000Z" title="发表于 2025-06-26 17:34:53">2025-06-26</time></div><a class="article-sort-item-title" href="/2025/06/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" title="我的第一篇文章">我的第一篇文章</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2025/01/27/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E5%85%AD)/" title="基于深度学习的python速通(六)"><img src="https://lstyimgbed.cn/PicGo/cover-3.jpg" alt="基于深度学习的python速通(六)" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-01-27T08:00:00.000Z" title="发表于 2025-01-27 16:00:00">2025-01-27</time></div><a class="article-sort-item-title" href="/2025/01/27/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E5%85%AD)/" title="基于深度学习的python速通(六)">基于深度学习的python速通(六)</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2025/01/27/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E4%BA%94)/" title="基于深度学习的python速通(五)"><img src="https://lstyimgbed.cn/PicGo/cover-2.jpg" alt="基于深度学习的python速通(五)" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-01-27T06:00:00.000Z" title="发表于 2025-01-27 14:00:00">2025-01-27</time></div><a class="article-sort-item-title" href="/2025/01/27/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E4%BA%94)/" title="基于深度学习的python速通(五)">基于深度学习的python速通(五)</a></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/archives/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://lstyimgbed.cn/Icon/transparent_100x100.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">丛雨丛雨丛</div><div class="author-info-description">柚子厨老窝</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">20</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/MzyCf"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/MzyCf" target="_blank" title="Github"><i class="fa-brands fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://github.com/MzyCf" target="_blank" title="Wechat"><i class="fa-brands fa-weixin" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/470223779" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">本站于2025/07/24正式拥有自己的域名啦8(*°▽°*) <div class="color-66ccff">https://luoshuitianyi.love</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/05/20/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E5%9B%9B)/" title="无标题"><img src="/img/miku2_1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无标题"/></a><div class="content"><a class="title" href="/2026/05/20/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E5%9B%9B)/" title="无标题">无标题</a><time datetime="2026-05-20T00:16:29.883Z" title="发表于 2026-05-20 08:16:29">2026-05-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/05/20/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-05-20/" title="AI资讯日报 · 2026年5月20日"><img src="/img/ai-daily-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AI资讯日报 · 2026年5月20日"/></a><div class="content"><a class="title" href="/2026/05/20/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-05-20/" title="AI资讯日报 · 2026年5月20日">AI资讯日报 · 2026年5月20日</a><time datetime="2026-05-20T00:00:00.000Z" title="发表于 2026-05-20 08:00:00">2026-05-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/05/19/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-05-19/" title="AI资讯日报 · 2026年5月19日"><img src="/img/ai-daily-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AI资讯日报 · 2026年5月19日"/></a><div class="content"><a class="title" href="/2026/05/19/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-05-19/" title="AI资讯日报 · 2026年5月19日">AI资讯日报 · 2026年5月19日</a><time datetime="2026-05-19T00:00:00.000Z" title="发表于 2026-05-19 08:00:00">2026-05-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/17/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E5%85%AB)/" title="基于深度学习的python速通(六)-与学习相关的技巧"><img src="https://lstyimgbed.cn/PicGo/cover-6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于深度学习的python速通(六)-与学习相关的技巧"/></a><div class="content"><a class="title" href="/2025/11/17/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E5%85%AB)/" title="基于深度学习的python速通(六)-与学习相关的技巧">基于深度学习的python速通(六)-与学习相关的技巧</a><time datetime="2025-11-17T04:20:00.000Z" title="发表于 2025-11-17 12:20:00">2025-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/17/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E4%B8%83)/" title="基于深度学习的python速通(七)"><img src="https://lstyimgbed.cn/PicGo/cover-5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于深度学习的python速通(七)"/></a><div class="content"><a class="title" href="/2025/11/17/%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84python(%E4%B8%83)/" title="基于深度学习的python速通(七)">基于深度学习的python速通(七)</a><time datetime="2025-11-17T04:00:00.000Z" title="发表于 2025-11-17 12:00:00">2025-11-17</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B1%95%E7%A4%BA%E9%A1%B5/"><span class="card-category-list-name">展示页</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8C%96%E5%9D%91/"><span class="card-category-list-name">挖坑</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8E%A8%E4%B8%80%E8%BE%88%E5%AD%90%E4%B8%ADv%E5%A5%BD%E5%90%97/"><span class="card-category-list-name">推一辈子中v好吗</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF/"><span class="card-category-list-name">电子技术</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%B0%E5%BD%95/"><span class="card-category-list-name">记录</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%B5%84%E8%AE%AF/"><span class="card-category-list-name">资讯</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/AI/" style="font-size: 1.3em; color: rgb(70, 122, 71);">AI</a><a href="/tags/%E8%B5%84%E8%AE%AF/" style="font-size: 1.3em; color: rgb(82, 108, 165);">资讯</a><a href="/tags/%E6%97%A5%E6%8A%A5/" style="font-size: 1.3em; color: rgb(194, 128, 51);">日报</a><a href="/tags/Google/" style="font-size: 1.3em; color: rgb(112, 137, 66);">Google</a><a href="/tags/Gemini/" style="font-size: 1.3em; color: rgb(56, 165, 165);">Gemini</a><a href="/tags/Agent/" style="font-size: 1.3em; color: rgb(151, 166, 200);">Agent</a><a href="/tags/Anthropic/" style="font-size: 1.3em; color: rgb(50, 138, 183);">Anthropic</a><a href="/tags/X%E5%B9%B3%E5%8F%B0/" style="font-size: 1.3em; color: rgb(135, 52, 160);">X平台</a><a href="/tags/Hexo/" style="font-size: 1.15em; color: rgb(118, 50, 59);">Hexo</a><a href="/tags/LaTeX/" style="font-size: 1.15em; color: rgb(152, 127, 170);">LaTeX</a><a href="/tags/python-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 1.3em; color: rgb(142, 128, 138);">python 神经网络 机器学习</a><a href="/tags/html/" style="font-size: 1.15em; color: rgb(171, 53, 146);">html</a><a href="/tags/python-matplotlib-%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 1.15em; color: rgb(50, 50, 179);">python matplotlib 数据可视化 机器学习</a><a href="/tags/python/" style="font-size: 1.45em; color: rgb(128, 50, 55);">python</a><a href="/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" style="font-size: 1.3em; color: rgb(91, 104, 140);">神经网络</a><a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 1.3em; color: rgb(187, 147, 64);">机器学习</a><a href="/tags/python-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.15em; color: rgb(131, 163, 50);">python 神经网络 机器学习 深度学习</a><a href="/tags/%E6%99%BA%E8%83%BD%E4%BD%93/" style="font-size: 1.15em; color: rgb(187, 186, 83);">智能体</a><a href="/tags/python-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.15em; color: rgb(151, 50, 50);">python 神经网络 深度学习</a><a href="/tags/python-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-%E8%AF%AF%E5%B7%AE%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD-Backpropagation-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.15em; color: rgb(50, 50, 50);">python 神经网络 误差反向传播 Backpropagation 深度学习</a><a href="/tags/imgs/" style="font-size: 1.15em; color: rgb(175, 50, 50);">imgs</a><a href="/tags/docs/" style="font-size: 1.15em; color: rgb(107, 75, 190);">docs</a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.15em; color: rgb(181, 50, 162);">深度学习</a><a href="/tags/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/" style="font-size: 1.15em; color: rgb(74, 65, 157);">梯度下降</a><a href="/tags/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" style="font-size: 1.15em; color: rgb(106, 50, 50);">图形学 线性代数</a><a href="/tags/%E7%94%B5%E8%B7%AF-%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF/" style="font-size: 1.15em; color: rgb(113, 50, 136);">电路 电子技术</a><a href="/tags/%E7%AA%9D%E7%82%B9%E6%90%AD%E5%BB%BA/" style="font-size: 1.15em; color: rgb(50, 97, 110);">窝点搭建</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/05/">
+            <span class="card-archive-list-date">
+              五月 2026
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              十一月 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/09/">
+            <span class="card-archive-list-date">
+              九月 2025
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/08/">
+            <span class="card-archive-list-date">
+              八月 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              六月 2025
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/01/">
+            <span class="card-archive-list-date">
+              一月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">20</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">54.5k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-05-20T11:44:42.660Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2019 - 2026 By 丛雨丛雨丛</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"></div><canvas id="universe"></canvas><script defer src="/js/universe.js"></script><script async src="/js/lib/pace-1.2.4.min.js"></script><script src="/js/lib/vue-2.6.14.min.js"></script><script src="/js/lib/element-ui-2.15.6.min.js"></script><script defer src="/js/notification.js"></script><script defer src="/js/test-notification.js"></script><script src="/js/sun_moon.js" async></script><script defer src="/js/lib/sweetalert2-8.19.0.min.js"></script><script defer src="/js/lunar.js"></script><script defer src="/js/day.js"></script><script defer src="/js/randomdoc.js"></script><script src="/js/lib/jquery-3.7.1.min.js"></script><script type="text/javascript" src="/js/rightmenu.js"></script><script defer src="/js/runtime.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      true
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="什么都搜得到哦" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(/img/shanchahua.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/资讯/&quot;);" href="javascript:void(0);">资讯</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr">任务罢了</span></li><li class="categoryBar-list-item" style="background:url(/img/juhua.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/挖坑/&quot;);" href="javascript:void(0);">挖坑</a><span class="categoryBar-list-count">7</span><span class="categoryBar-list-descr">精装修的记录就在这里啦</span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/记录/&quot;);" href="javascript:void(0);">记录</a><span class="categoryBar-list-count">7</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/推一辈子中v好吗/&quot;);" href="javascript:void(0);">推一辈子中v好吗</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/展示页/&quot;);" href="javascript:void(0);">展示页</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/电子技术/&quot;);" href="javascript:void(0);">电子技术</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/11/17/基于深度学习的python(八)/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/cover-6.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-11-17</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/11/17/基于深度学习的python(八)/&quot;);" href="javascript:void(0);" alt="">基于深度学习的python速通(六)-与学习相关的技巧</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/11/17/基于深度学习的python(八)/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/11/17/基于深度学习的python(七)/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/cover-5.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-11-17</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/11/17/基于深度学习的python(七)/&quot;);" href="javascript:void(0);" alt="">基于深度学习的python速通(七)</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/11/17/基于深度学习的python(七)/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/01/27/基于深度学习的python(六)/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/cover-3.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-01-27</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/01/27/基于深度学习的python(六)/&quot;);" href="javascript:void(0);" alt="">基于深度学习的python速通(六)</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/01/27/基于深度学习的python(六)/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/08/15/娜迦Agent/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/luo-ling.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-08-15</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/08/15/娜迦Agent/&quot;);" href="javascript:void(0);" alt="">娜迦Agent</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/08/15/娜迦Agent/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/01/27/基于深度学习的python(五)/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/cover-2.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-01-27</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/01/27/基于深度学习的python(五)/&quot;);" href="javascript:void(0);" alt="">基于深度学习的python速通(五)</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/01/27/基于深度学习的python(五)/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/06/27/web前端开发实验记录/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/miku2_1.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-06-27</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/06/27/web前端开发实验记录/&quot;);" href="javascript:void(0);" alt="">web前端开发实验记录</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/06/27/web前端开发实验记录/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/06/27/窝点精装修记录/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/addiction.00_00_13_37.Still001.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-06-27</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/06/27/窝点精装修记录/&quot;);" href="javascript:void(0);" alt="">窝点精装修记录</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/06/27/窝点精装修记录/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/09/08/python程序设计/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/Luo.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-09-08</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/09/08/python程序设计/&quot;);" href="javascript:void(0);" alt="">python程序设计</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/09/08/python程序设计/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/09/08/基于深度学习的python(一)/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/cover-1.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-09-08</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/09/08/基于深度学习的python(一)/&quot;);" href="javascript:void(0);" alt="">基于深度学习的python速通(一)</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/09/08/基于深度学习的python(一)/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/08/15/计算机图形学/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/ling-luo.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-08-15</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/08/15/计算机图形学/&quot;);" href="javascript:void(0);" alt="">N天慢通计算机图形学</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/08/15/计算机图形学/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/06/26/我的第一篇文章/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/0831miku.00_03_33_58.Still002.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-06-26</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/06/26/我的第一篇文章/&quot;);" href="javascript:void(0);" alt="">我的第一篇文章</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/06/26/我的第一篇文章/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/06/26/无限共鸣北京场/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/QQ图片20250722230353.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-06-26</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/06/26/无限共鸣北京场/&quot;);" href="javascript:void(0);" alt="">洛天依2025「无限共鸣·流光协奏」全息巡回演唱会北京场</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/06/26/无限共鸣北京场/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/08/15/Hexo-LaTeX支持方案/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/ling-luo.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-08-15</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/08/15/Hexo-LaTeX支持方案/&quot;);" href="javascript:void(0);" alt="">Hexo 框架 LaTeX 数学公式支持解决方案</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/08/15/Hexo-LaTeX支持方案/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__fadeIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '500ms');
+    arr[i].setAttribute('data-wow-offset', '100');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__fadeIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('pagination');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__fadeIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><!-- hexo injector body_end end --></body></html>
