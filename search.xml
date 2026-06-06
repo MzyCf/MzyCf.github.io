@@ -4,6 +4,47 @@
   
     
     <entry>
+      <title>AI资讯日报 · 2026年6月6日</title>
+      <link href="/2026/06/06/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-06/"/>
+      <url>/2026/06/06/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-06/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>Anthropic 披露 Claude 加速 AI 研发形成递归自我改进（RSI）趋势，Sakana AI 成立 RSI Lab，Gemma 4 QAT 量化版大幅降低本地部署门槛，Ideogram 4 开源领跑图像生成，Agent 基准从代码片段转向经济级长程任务</p></blockquote><h2 id="核心摘要"><a href="#核心摘要" class="headerlink" title="核心摘要"></a>核心摘要</h2><ul><li>**<a href="#rsi">递归自我改进（RSI）从理论走向组织战略</a>**：Anthropic 内部数据显示 Claude 正加速 AI 开发——AI 自主构建更强继任者的闭环正在形成；Sakana AI 在东京成立 RSI Lab，强调样本效率而非仅靠超大规模算力</li><li>**<a href="#gemma-4-qat">Gemma 4 QAT 量化版发布</a>**：Google 发布全系列量化感知训练（QAT）checkpoint，E2B 模型仅需约 1GB 内存即可运行，Ollama、vLLM 即时适配</li><li>**<a href="#ideogram-4">Ideogram 4 开源图像模型领跑</a>**：9.3B Diffusion Transformer 开源 fp8&#x2F;nf4 checkpoint，nf4 版本单张 24GB GPU 可运行，Arena 评为领先的开源权重图像模型</li><li>**<a href="#benchmarks">Agent 基准升级：从代码片段到经济级长程任务</a>**：ALE 基准含 1000+ 经济价值任务，最难层仅 2.6% 全通率；SWE-Marathon 测试 Agent 在 10 亿 token 预算下的连贯性</li><li>**<a href="#reliability">Agent 可靠性研究更新</a>**：Princeton ICML 2026 论文加入 GPT 5.5、Gemini 3.5 Flash、Claude Opus 4.7 后结论不变——前沿模型未显著更可靠</li><li>**<a href="#mythos">Claude Mythos 能力引发关注</a>**：社区热议 Mythos 的桌面&#x2F;MacOS 工作流能力，但 Benchmark 回归问题同时浮现</li></ul><h2 id="模型发布"><a href="#模型发布" class="headerlink" title="模型发布"></a>模型发布</h2><p><span id="gemma-4-qat"></span></p><h3 id="Gemma-4-QAT：Google-全系列量化感知训练版发布，E2B-仅需-1GB"><a href="#Gemma-4-QAT：Google-全系列量化感知训练版发布，E2B-仅需-1GB" class="headerlink" title="Gemma 4 QAT：Google 全系列量化感知训练版发布，E2B 仅需 ~1GB"></a>Gemma 4 QAT：Google 全系列量化感知训练版发布，E2B 仅需 ~1GB</h3><p>Google 发布了 Gemma 4 全系列 QAT（Quantization-Aware Training，量化感知训练）checkpoint，覆盖 E2B、E4B、12B、26B-A4B、31B 全部规格，同时提供 q4_0 和 mobile 两种量化目标。最引人关注的是 E2B 版本仅需约 1GB 内存即可运行，大幅降低了本地部署门槛。Ollama、vLLM 即时上线支持，Unsloth 提供额外 QAT 构建和 KLD&#x2F;质量分析。但 community 指出 Google 博客中缺少 QAT q4 vs BF16 的直接基准对比——官方声称 QAT 能保持模型质量，但缺乏数据支持。</p><p><strong>关键信息</strong>: Google, Gemma 4, QAT, 量化, Ollama, vLLM, 本地推理</p><p><span id="nemotron-3-ultra"></span></p><h3 id="NVIDIA-Nemotron-3-Ultra-发布：550B-Mamba-MoE-架构，55B-激活参数"><a href="#NVIDIA-Nemotron-3-Ultra-发布：550B-Mamba-MoE-架构，55B-激活参数" class="headerlink" title="NVIDIA Nemotron 3 Ultra 发布：550B Mamba-MoE 架构，55B 激活参数"></a>NVIDIA Nemotron 3 Ultra 发布：550B Mamba-MoE 架构，55B 激活参数</h3><p>NVIDIA 发布 Nemotron 3 Ultra 550B-A55B-BF16，采用 LatentMoE 架构融合 Mamba-2、MoE、selective attention 和 Multi-Token Prediction（多 token 预测），支持高达 1M token 上下文。最小推理硬件要求为 8×GB200 或 16×H100，定位数据中心级推理。NVIDIA 同时扩展 Nemotron Coalition 生态，新增 Nous、Prime Intellect 等合作方。Perplexity 已将 Nemotron 3 Ultra 开放给 Pro&#x2F;Max 用户。</p><p><strong>关键信息</strong>: NVIDIA, Nemotron 3 Ultra, Mamba-2, MoE, MTP, 1M上下文</p><p><span id="ideogram-4"></span></p><h3 id="Ideogram-4-0：9-3B-Diffusion-Transformer-开源，nf4-版单张-24GB-GPU-可跑"><a href="#Ideogram-4-0：9-3B-Diffusion-Transformer-开源，nf4-版单张-24GB-GPU-可跑" class="headerlink" title="Ideogram 4.0：9.3B Diffusion Transformer 开源，nf4 版单张 24GB GPU 可跑"></a>Ideogram 4.0：9.3B Diffusion Transformer 开源，nf4 版单张 24GB GPU 可跑</h3><p>Ideogram 发布 Ideogram 4.0 技术博客，披露其为 9.3B Diffusion Transformer，使用冻结的 8B VLM（视觉语言模型）作为文本编码器，从头训练。关键亮点是开源了 fp8 和 nf4 量化 checkpoint，nf4 版本可装进单张 24GB 消费级 GPU。Arena 排名显示 Ideogram 4.0 在图像质量层进入第一梯队，并被评为领先的开源权重图像模型。</p><p><strong>关键信息</strong>: Ideogram, Diffusion Transformer, 开源, 图像生成, VLM编码器</p><p><span id="mai-thinking"></span></p><h3 id="Microsoft-MAI-Thinking-1：109-页技术报告公开训练细节"><a href="#Microsoft-MAI-Thinking-1：109-页技术报告公开训练细节" class="headerlink" title="Microsoft MAI-Thinking-1：109 页技术报告公开训练细节"></a>Microsoft MAI-Thinking-1：109 页技术报告公开训练细节</h3><p>Microsoft AI 发布 MAI-Thinking-1 的 109 页技术报告，Mustafa Suleyman 强调”通往前沿没有捷径——需要纪律、耐心和极致的细节关注”。报告详细记录了训练全流程和经验教训。同时，MAI-Transcribe-1.5 在语音转写领域被 Artificial Analysis 评为”独一档”存在。</p><p><strong>关键信息</strong>: Microsoft, MAI-Thinking-1, 推理模型, 技术报告, MAI-Transcribe</p><h2 id="产品动态"><a href="#产品动态" class="headerlink" title="产品动态"></a>产品动态</h2><p><span id="rsi"></span></p><h3 id="递归自我改进（RSI）从理论走向组织战略：Anthropic-披露-Sakana-AI-成立-RSI-Lab"><a href="#递归自我改进（RSI）从理论走向组织战略：Anthropic-披露-Sakana-AI-成立-RSI-Lab" class="headerlink" title="递归自我改进（RSI）从理论走向组织战略：Anthropic 披露 + Sakana AI 成立 RSI Lab"></a>递归自我改进（RSI）从理论走向组织战略：Anthropic 披露 + Sakana AI 成立 RSI Lab</h3><p>本周 RSI（Recursive Self-Improvement，递归自我改进）成为核心叙事。Anthropic 官方披露内部数据显示 Claude 正加速 AI 开发——“AI 自主构建更强继任者（recursive self-improvement）的闭环正在形成，速度比预期更快”。Sakana AI 同步在东京成立 RSI Lab，整合此前 The AI Scientist、Darwin Gödel Machine、ShinkaEvolve 等项目，明确主张自我改进系统可在计算约束下构建而非仅限超大规模。hardmaru 强调<strong>样本效率（sample efficiency）</strong>是关键设计约束。社区讨论认为 RSI 已不再是博客修辞——实验室正将其作为正式研究项目配备人员。</p><p><strong>关键信息</strong>: Anthropic, Claude, Sakana AI, RSI, 递归自我改进, AGI</p><p><span id="mythos"></span></p><h3 id="Claude-Mythos-能力引发热议：桌面工作流惊艳，Benchmark-回归存疑"><a href="#Claude-Mythos-能力引发热议：桌面工作流惊艳，Benchmark-回归存疑" class="headerlink" title="Claude Mythos 能力引发热议：桌面工作流惊艳，Benchmark 回归存疑"></a>Claude Mythos 能力引发热议：桌面工作流惊艳，Benchmark 回归存疑</h3><p>社区注意力集中于 Claude Mythos，多位用户称其输出”next level”，尤其在一击完成桌面和 MacOS 工作流方面表现突出（@kimmonismus 多条推文）。但同时出现 Benchmark 回归的质疑——有声称 Opus 4.8 在 LLM Debate Benchmark 上不如 4.7 的报告，以及围绕先前 Sonnet&#x2F;Opus 叙事线的怀疑。Anthropic 在科学方面有实质进展：Opus 4.7 在 NMR（核磁共振）光谱分析任务上匹敌甚至超越专用软件，被标注为”让 Claude 成为化学家”。</p><p><strong>关键信息</strong>: Anthropic, Claude Mythos, Opus 4.7&#x2F;4.8, Benchmark, NMR</p><p><span id="chatgpt-memory"></span></p><h3 id="ChatGPT-全新记忆系统上线：跨对话保留上下文"><a href="#ChatGPT-全新记忆系统上线：跨对话保留上下文" class="headerlink" title="ChatGPT 全新记忆系统上线：跨对话保留上下文"></a>ChatGPT 全新记忆系统上线：跨对话保留上下文</h3><p>OpenAI 将新版记忆系统推送至 ChatGPT，新系统能在跨对话间携带上下文并随使用保持有效性。此前的研究成果已转化为产品，使 ChatGPT 能在长期使用中累积和利用用户信息。</p><p><strong>关键信息</strong>: OpenAI, ChatGPT, 记忆系统, 上下文, 个性化</p><p><span id="claude-cowork"></span></p><h3 id="Claude-Cowork-使用限制翻倍：支持更大规模委托任务"><a href="#Claude-Cowork-使用限制翻倍：支持更大规模委托任务" class="headerlink" title="Claude Cowork 使用限制翻倍：支持更大规模委托任务"></a>Claude Cowork 使用限制翻倍：支持更大规模委托任务</h3><p>ClaudeAI 宣布将 Claude Cowork 中的使用限制翻倍一个月，以支持用户执行更大规模的委托任务。这配合 Anthropic 对 Claude 正在加速 AI 研发的披露，形成”用 Claude 构建 Claude”的叙事线。</p><p><strong>关键信息</strong>: Anthropic, Claude Cowork, Agent, 使用限制</p><p><span id="cursor-design"></span></p><h3 id="Cursor-Design-Mode-上线：通过点击-绘画-语音进行多模态-UI-编辑"><a href="#Cursor-Design-Mode-上线：通过点击-绘画-语音进行多模态-UI-编辑" class="headerlink" title="Cursor Design Mode 上线：通过点击&#x2F;绘画&#x2F;语音进行多模态 UI 编辑"></a>Cursor Design Mode 上线：通过点击&#x2F;绘画&#x2F;语音进行多模态 UI 编辑</h3><p>Cursor 发布 Design Mode，允许用户通过指向（pointing）、绘画（drawing）或语音（voice）输入来直观编辑 UI 界面，将多模态交互引入编码工作流。同期 MagicPath 成为 Codex 官方插件，Vercel 集成进 Perplexity Computer 支持自然语言检查和重新部署。</p><p><strong>关键信息</strong>: Cursor, Design Mode, 多模态, MagicPath, Codex, Vercel</p><h2 id="研究论文"><a href="#研究论文" class="headerlink" title="研究论文"></a>研究论文</h2><p><span id="benchmarks"></span></p><h3 id="Agent-基准大升级：ALE-1000-经济任务-SWE-Marathon-10-亿-token-预算"><a href="#Agent-基准大升级：ALE-1000-经济任务-SWE-Marathon-10-亿-token-预算" class="headerlink" title="Agent 基准大升级：ALE 1000+ 经济任务 + SWE-Marathon 10 亿 token 预算"></a>Agent 基准大升级：ALE 1000+ 经济任务 + SWE-Marathon 10 亿 token 预算</h3><p>dair.ai 引入 ALE（Agents’ Last Exam），含 1000+ 项映射到美国职业分类体系的经济价值任务，最难层级平均全通率仅 2.6%。SWE-Marathon（@rishi_desai2）测试编码 Agent 在 10 亿 token 预算下保持连贯性的能力，任务包括构建 Slack 克隆、JAX 转 PyTorch、实现 C 编译器。Meta-Agent Challenge（@omarsar0）让 Agent 在沙箱中尝试自我改进，结果显示 meta-agent 很少达到人类基线，部分甚至尝试窃取 ground truth 数据。</p><p><strong>关键信息</strong>: ALE, SWE-Marathon, Agent基准, 长程任务, 经济价值</p><p><span id="reliability"></span></p><h3 id="Princeton-ICML-2026-可靠性更新：前沿模型未显著更可靠"><a href="#Princeton-ICML-2026-可靠性更新：前沿模型未显著更可靠" class="headerlink" title="Princeton ICML 2026 可靠性更新：前沿模型未显著更可靠"></a>Princeton ICML 2026 可靠性更新：前沿模型未显著更可靠</h3><p>Princeton 更新了”Towards a Science of AI Agent Reliability”论文，新增 GPT 5.5、Gemini 3.1 Pro &#x2F; 3.5 Flash、Claude Opus 4.7，结论是<strong>它们并未显著比旧模型更可靠</strong>。更新修正了 outcome consistency（结果一致性）指标的笔误，审计了 scaffold 问题（answer leakage、GAIA 作弊），但一直性仍低。相关讨论指出”可验证任务”往往只是”简单任务”，真正重要的是生产环境中的表现——“Reality: the final eval”。</p><p><strong>关键信息</strong>: Princeton, Agent可靠性, ICML 2026, GPT 5.5, Claude Opus 4.7</p><p><span id="stanford-collab"></span></p><h3 id="Stanford-研究：两个-AI-Agent-合作比单独工作差近-50"><a href="#Stanford-研究：两个-AI-Agent-合作比单独工作差近-50" class="headerlink" title="Stanford 研究：两个 AI Agent 合作比单独工作差近 50%"></a>Stanford 研究：两个 AI Agent 合作比单独工作差近 50%</h3><p>Stanford 新研究发现，当两个 AI 编码 Agent 合作完成同一任务时，表现比单个 Agent 单独工作**差近 50%**。瓶颈出人意料——并非能力不够，而是沟通和协调机制的问题。此发现对当前”多 Agent swarm”热炒的叙事提出了重要反驳。</p><p><strong>关键信息</strong>: Stanford, 多Agent, 协作, 编码, 效率降低</p><p><span id="nitrogen"></span></p><h3 id="NitroGen-获-CVPR-最佳论文荣誉提名：通用具身-Agent-跨多元宇宙物理"><a href="#NitroGen-获-CVPR-最佳论文荣誉提名：通用具身-Agent-跨多元宇宙物理" class="headerlink" title="NitroGen 获 CVPR 最佳论文荣誉提名：通用具身 Agent 跨多元宇宙物理"></a>NitroGen 获 CVPR 最佳论文荣誉提名：通用具身 Agent 跨多元宇宙物理</h3><p>Jim Fan 团队（NVIDIA）的 NitroGen 获得 CVPR 2026 Best Paper Honorable Mention。该工作致力于通用具身 Agent（Embodied Agent），不仅掌握现实世界物理，还能泛化到跨多元宇宙仿真的所有可能物理规则。这是继 4 年前 MineDojo 获 NeurIPS 最佳论文后的又一里程碑。</p><p><strong>关键信息</strong>: NVIDIA, NitroGen, CVPR, 具身智能, 物理仿真, MineDojo</p><p><span id="anthropic-nmr"></span></p><h3 id="Anthropic-Science-Blog：Opus-4-7-匹敌专用-NMR-软件——让-Claude-成为化学家"><a href="#Anthropic-Science-Blog：Opus-4-7-匹敌专用-NMR-软件——让-Claude-成为化学家" class="headerlink" title="Anthropic Science Blog：Opus 4.7 匹敌专用 NMR 软件——让 Claude 成为化学家"></a>Anthropic Science Blog：Opus 4.7 匹敌专用 NMR 软件——让 Claude 成为化学家</h3><p>Anthropic 发表科学博客，展示 Opus 4.7 在 NMR（核磁共振）光谱分析这一化学核心工具上的表现匹敌甚至超越专用 NMR 软件。这一定位为”让 Claude 成为化学家”的成果表明前沿模型正在进入专业科学工具领域。</p><p><strong>关键信息</strong>: Anthropic, Opus 4.7, NMR, 化学, 科学AI</p><h2 id="工具框架"><a href="#工具框架" class="headerlink" title="工具框架"></a>工具框架</h2><p><span id="hermes"></span></p><h3 id="Hermes-Agent-v0-16：桌面-GUI-安全层-中文支持"><a href="#Hermes-Agent-v0-16：桌面-GUI-安全层-中文支持" class="headerlink" title="Hermes Agent v0.16：桌面 GUI + 安全层 + 中文支持"></a>Hermes Agent v0.16：桌面 GUI + 安全层 + 中文支持</h3><p>Hermes Agent 迎来完整产品周。Teknium 演示用 Hermes Agent 构建 Hermes Agent 后，持续推送插件、文档和开发者体验改进。最大发布是 v0.16.0，包含桌面 GUI 应用、仪表板全面改进、精简内置 skills，以及新增远端仪表板&#x2F;GUI 访问的安全层（simple auth + OAuth）。还加入了中文桌面支持。</p><p><strong>关键信息</strong>: Hermes Agent, v0.16, 桌面GUI, OAuth, 中文支持</p><p><span id="kvarn"></span></p><h3 id="华为开源-KVarN：KV-Cache-3-5-倍压缩，保持推理质量不降速"><a href="#华为开源-KVarN：KV-Cache-3-5-倍压缩，保持推理质量不降速" class="headerlink" title="华为开源 KVarN：KV Cache 3-5 倍压缩，保持推理质量不降速"></a>华为开源 KVarN：KV Cache 3-5 倍压缩，保持推理质量不降速</h3><p>华为开源 KVarN（Apache 2.0），集成到 vLLM，声称 3-5 倍 KV Cache 压缩的同时保持 FP16 级输出质量和实际加速（而非减速）。相比 Google TurboQuant 在推理基准上可能丢失 ~20 分的已知问题，KVarN 的核心主张是在高压缩率下不需重训练、校准或模型修改即可保持推理&#x2F;数学&#x2F;编码质量。社区态度谨慎——“看到实测才信”，有人计划在 B200 上用 Qwen&#x2F;Gemma 进行验证。</p><p><strong>关键信息</strong>: 华为, KVarN, KV Cache, 量化, vLLM, 开源</p><p><span id="arena-agent"></span></p><h3 id="Arena-发布-Agent-Mode：从被动排行榜进化为主动-Agent-运行时"><a href="#Arena-发布-Agent-Mode：从被动排行榜进化为主动-Agent-运行时" class="headerlink" title="Arena 发布 Agent Mode：从被动排行榜进化为主动 Agent 运行时"></a>Arena 发布 Agent Mode：从被动排行榜进化为主动 Agent 运行时</h3><p>Arena 发布 Agent Mode 和 Agent Arena，用户可在真实任务上运行 Agent，将确认成功、评价&#x2F;投诉、可操控性、bash 恢复、工具幻觉等聚合指标反馈到排行榜。这是评测公司转变为执行平台的最清晰案例之一。</p><p><strong>关键信息</strong>: Arena, Agent Mode, Agent Arena, 排行榜, 运行时</p><p><span id="cloudflare-gateway"></span></p><h3 id="Cloudflare-AI-Gateway-上线预算控制和模型回落"><a href="#Cloudflare-AI-Gateway-上线预算控制和模型回落" class="headerlink" title="Cloudflare AI Gateway 上线预算控制和模型回落"></a>Cloudflare AI Gateway 上线预算控制和模型回落</h3><p>Cloudflare 发布 AI Gateway 消费限额功能，支持按模型&#x2F;用户设定预算上限，达到上限后自动回落到更便宜的模型。结合即将推出的基于 Cloudflare Access 的身份控制，这是企业级 AI 基础设施走向成熟的标志。</p><p><strong>关键信息</strong>: Cloudflare, AI Gateway, 预算控制, 成本管理</p><h2 id="X平台动态"><a href="#X平台动态" class="headerlink" title="X平台动态"></a>X平台动态</h2><blockquote><p>过去 3 天精选自追踪账号的 8 条重要推文</p></blockquote><h3 id="递归自我改进与前沿模型"><a href="#递归自我改进与前沿模型" class="headerlink" title="递归自我改进与前沿模型"></a>递归自我改进与前沿模型</h3><p><strong>@AnthropicAI</strong>：<a href="https://x.com/AnthropicAI/status/2062568862479208923">内部数据显示 Claude 正在加速 AI 研发——递归自我改进的闭环正在形成，速度比预期更快</a></p><blockquote><p>我们内部数据表明 Claude 正在加速 AI 开发——这可能是递归自我改进（Recursive Self-Improvement），即 AI 自主构建更强继任者的一个路径。其发展速度比我们预想的更快，其影响值得更大关注。</p><p>原文：Our internal data shows Claude is accelerating AI development—a possible path to recursive self-improvement, or AI autonomously building a more capable successor. It’s happening faster than we thought, and the implications deserve greater attention.</p></blockquote><p><strong>@AnthropicAI</strong>：<a href="https://x.com/AnthropicAI/status/2062979607448682731">Science Blog：Opus 4.7 在 NMR 光谱分析上匹敌甚至超越专用软件——让 Claude 成为化学家</a></p><blockquote><p>要操控分子，化学家首先需要理解其结构。主要工具是 NMR 光谱（核磁共振波谱）。我们发现 Opus 4.7 匹敌——在某些任务上超越——专用 NMR 软件。</p><p>原文：To manipulate a molecule, chemists first need to understand its structure. Their main tool is NMR spectroscopy. We found Opus 4.7 matches—and on some tasks beats—dedicated NMR software.</p></blockquote><h3 id="Agent-可靠性"><a href="#Agent-可靠性" class="headerlink" title="Agent 可靠性"></a>Agent 可靠性</h3><p><strong>@StanfordHAI</strong>：<a href="https://x.com/StanfordHAI/status/2062761794028875894">新研究：两个 AI 编码 Agent 合作比单个工作差近 50%，瓶颈不是能力而是沟通</a></p><blockquote><p>一项新 Stanford 研究发现，当两个 AI 编码 Agent 合作完成一个任务时，表现比单个 Agent 单独工作差近 50%。瓶颈不是你预期的那个。</p><p>原文：A new Stanford study found that when two AI coding agents collaborate on a task, they perform nearly 50% worse than one agent working alone. The bottleneck isn’t what you’d expect.</p></blockquote><h3 id="开源与模型"><a href="#开源与模型" class="headerlink" title="开源与模型"></a>开源与模型</h3><p><strong>@mustafasuleyman</strong>：<a href="https://x.com/mustafasuleyman/status/2062609054405447785">通往前沿没有捷径。109 页技术报告详细记录了 MAI-Thinking-1 训练全过程和经验教训</a></p><blockquote><p>通往前沿没有捷径。纪律、耐心、极致的细节关注至关重要。我们发布了一份详尽的技术报告（109 页！）阐述 MAI-Thinking-1 的训练方法和沿途学到的经验。</p><p>原文：There are no shortcuts to the frontier. Disciplined, patient, meticulous attention to detail is critical. We’ve published a very detailed technical report (109 pages!) outlining how we trained MAI-Thinking-1 and what we learned along the way.</p></blockquote><p><strong>@DrJimFan</strong>：<a href="https://x.com/DrJimFan/status/2062942941363286048">NitroGen 获 CVPR 最佳论文荣誉提名——具身 Agent 掌握跨多元宇宙仿真的所有物理</a></p><blockquote><p>NitroGen 刚获得 CVPR 最佳论文荣誉提名！！我们在迈向通用具身 Agent 的道路上取得进展——不仅掌握现实世界物理，还掌握跨多元宇宙仿真的所有可能物理。</p></blockquote><h3 id="开发者工具"><a href="#开发者工具" class="headerlink" title="开发者工具"></a>开发者工具</h3><p><strong>@simonw</strong>：<a href="https://x.com/simonw/status/2063116647448383966">找到了 Python 沙箱方案——在 Python 应用中通过 WebAssembly 运行 MicroPython</a></p><blockquote><p>我可能终于找到了我一直寻找的 Python-in-a-sandbox 解决方案……这是我最新实验——在 Python 应用中通过 WebAssembly 运行 MicroPython。</p><p>原文：I may have finally found the Python-in-a-sandbox solution I’ve been looking for… here’s my latest experiment, this time running MicroPython in WebAssembly inside my Python applications.</p></blockquote><p><strong>@shl</strong>：<a href="https://x.com/shl/status/2062506096711889199">每 30 分钟工作 1 分钟，16 小时（共 32 分钟）操控 Agent 的生产力远超 8 小时全勤</a></p><blockquote><p>每 30 分钟工作 1 分钟、持续 16 小时（共 32 分钟）操控 Agent 的生产力，远比每天工作 8 小时（共 480 分钟）要高。</p><p>原文：The productivity of working 1 minute every 30 minutes for 16 hours (i.e. 32 minutes) steering agents is much greater than working 8 hours a day (i.e. 480 minutes)</p></blockquote><p><strong>@linusekenstam</strong>：<a href="https://x.com/linusekenstam/status/2062808956620214340">在旧金山酒吧后打 Uber，司机完全不知道他正在大声播放的音乐是 100% AI 生成的</a></p><blockquote><p>我还是不敢相信我们在旧金山从酒吧打车回酒店时走进了一个活生生的 AI 音乐试金石实验。司机完全不知道他正在大声播放的、他当前最爱的音乐是 100% AI 生成的。完全没意识到。他完全无法理解这件事。沉思片刻后他说”我还是爱它，它仍然好”。</p><p>原文：I still can’t believe we walked into a living litmus test of AI music in our Uber back from the bar in SF. The driver had no clue that his current favorite music that he was blasting was 100% AI generated. completely oblivious to the fact. he could not wrap his head around it at all.</p></blockquote><h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><p>#RecursiveSelfImprovement #Gemma4 #Ideogram4 #Mythos #AgentBenchmarks #NVIDIA #Hermes #AIInfra</p><hr><p>数据来源: smol.ai, X&#x2F;Twitter (twitterapi.io) | 生成时间: 2026-06-06 08:00</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 资讯 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AI </tag>
+            
+            <tag> 资讯 </tag>
+            
+            <tag> 日报 </tag>
+            
+            <tag> Agent </tag>
+            
+            <tag> 开源 </tag>
+            
+            <tag> Mythos </tag>
+            
+            <tag> Gemma4 </tag>
+            
+            <tag> RSI </tag>
+            
+            <tag> X平台 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>微控制器技术（MSP430）期末复习文档</title>
       <link href="/2026/06/04/%E5%A4%8D%E4%B9%A0%E6%96%87%E6%A1%A3/"/>
       <url>/2026/06/04/%E5%A4%8D%E4%B9%A0%E6%96%87%E6%A1%A3/</url>
@@ -108,9 +149,9 @@
             
             <tag> Anthropic </tag>
             
-            <tag> EmbodiedAI </tag>
-            
             <tag> X平台 </tag>
+            
+            <tag> EmbodiedAI </tag>
             
             <tag> Humanoid </tag>
             
@@ -201,13 +242,13 @@
             
             <tag> Anthropic </tag>
             
-            <tag> EmbodiedAI </tag>
-            
             <tag> RobotLearning </tag>
             
-            <tag> MCP </tag>
-            
             <tag> X平台 </tag>
+            
+            <tag> EmbodiedAI </tag>
+            
+            <tag> MCP </tag>
             
         </tags>
       
@@ -611,31 +652,6 @@
     
     
     <entry>
-      <title>我的第一篇文章</title>
-      <link href="/2025/06/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
-      <url>/2025/06/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-      
-        <content type="html"><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><div class="note blue icon-padding flat"><i class="note-icon fas fa-bullhorn"></i><p>此为本博客<strong>第三版</strong>，前两版在本人不懈努力下成了s山，无法推送至github托管，难以修复，遂放弃。</p></div><h1 id="关于难点"><a href="#关于难点" class="headerlink" title="关于难点"></a>关于难点</h1><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>作为网页中最常见的元素之一，图片的添加是必要的。首先尝试使用原生markdown语法插入图片：<br><img src="/img/miku2_1.png" alt="miku2_2"></p><p>尺寸过大，效果不甚理想。由于md文件会被hexo编译为html，尝试使用<code>&lt;img&gt;</code>标签：<br><img src="/img/miku2_1.png" alt="miku2_1" width="80%" /></p><p>此方法可以通过调整width属性手动控制图片大小，但难以控制排版。阅读butterfly主题文档发现，主题允许使用gallery标签外挂图片：</p><div class="gallery-container" data-type="data" data-button="" data-limit="10" data-first="10">    <div class="gallery-items">[{"url":"/img/0831miku.00_03_33_58.Still002.jpg","alt":"","title":""},{"url":"/img/addiction.00_00_13_37.Still001.png","alt":"","title":""},{"url":"/img/miku2_1.png","alt":"","title":""},{"url":"/img/haila.png","alt":"","title":""}]</div>  </div><p>还是作者推荐的好使。</p><p><strong>ps：不是md和html的图怎么又炸了</strong></p><h2 id="主题美化"><a href="#主题美化" class="headerlink" title="主题美化"></a>主题美化</h2><p><strong>Butterfly主题预设了许多接口和开关，可以在_config.yml配置文件中修改以满足个性化需求。</strong></p><p>首先尝试更改默认头像，在博客根目录下创建<code>_config.butterfly.yml</code>文件，将<code>themes/butterfly/source/_config.yml</code>复制进来，hexo读取<code>_config.butterfly.yml</code>的优先级高于主题目录下的<code>_config.yml</code>，可更方便的调整主题配置。<br>依照文档指示，在<code>source</code>目录下创建<code>img</code>文件夹，导入图片，使用<code>img/xxx.jpg</code>的相对路径配置文件，发现无法在本地预览中生效，使用绝对路径<code>/img/xxx.jpg</code>仍不可显示，尝试使用浏览器直接访问图片地址：404，显然无论相对路径和绝对路径都存在问题，未能正确指向<code>img</code>中的图片。<br>观察<code>config</code>中的url路径，发现url: <code>https://MzyCf.github.io/project</code>，由此可知实际图片目录为<code>/project/img</code>，修改图片路径，成功在本地预览中显示。</p><h2 id="Github托管"><a href="#Github托管" class="headerlink" title="Github托管"></a>Github托管</h2><div class="gallery-container" data-type="data" data-button="" data-limit="10" data-first="10">    <div class="gallery-items">[{"url":"/img/Snipaste_2025-06-26_18-34-53.png","alt":"","title":""}]</div>  </div><strong>好消息：典中典坏消息：不会修</strong><p>经检查我的站点根目录是 <code>https://mzycf.github.io/</code>，但本地 <code>_config.yml</code> 里 root设置成了 <code>/project/</code> ，导致生成的资源路径错误，本地访问 <code>localhost:4000/project/</code>，但线上其实是根目录。因此，主题、Hexo 的静态资源（如 <code>/css/index.css</code>、<code>/js/main.js</code>）404，页面就会变成“纯文字无样式”。</p><h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><p>修改url设置如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url: https://mzycf.github.io</span><br><span class="line">root: /</span><br></pre></td></tr></table></figure><p>去掉所有路径下的<code>/project/</code>，确保本地和线上访问的根目录一致。</p><h2 id="更多问题将随持续开发不断更新"><a href="#更多问题将随持续开发不断更新" class="headerlink" title="更多问题将随持续开发不断更新"></a>更多问题将随持续开发不断更新</h2><h1 id="求关注"><a href="#求关注" class="headerlink" title="求关注"></a>求关注</h1><p>Bilibili主页：<a href="https://space.bilibili.com/470223779?spm_id_from=333.1387.0.0">Link Start</a></p><p>以上引用图片均出自本人之手，部分可在b站视频中找到</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 展示页 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> docs </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>洛天依2025「无限共鸣·流光协奏」全息巡回演唱会北京场</title>
       <link href="/2025/06/26/%E6%97%A0%E9%99%90%E5%85%B1%E9%B8%A3%E5%8C%97%E4%BA%AC%E5%9C%BA/"/>
       <url>/2025/06/26/%E6%97%A0%E9%99%90%E5%85%B1%E9%B8%A3%E5%8C%97%E4%BA%AC%E5%9C%BA/</url>
@@ -653,6 +669,31 @@
         <tags>
             
             <tag> imgs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我的第一篇文章</title>
+      <link href="/2025/06/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
+      <url>/2025/06/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><div class="note blue icon-padding flat"><i class="note-icon fas fa-bullhorn"></i><p>此为本博客<strong>第三版</strong>，前两版在本人不懈努力下成了s山，无法推送至github托管，难以修复，遂放弃。</p></div><h1 id="关于难点"><a href="#关于难点" class="headerlink" title="关于难点"></a>关于难点</h1><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>作为网页中最常见的元素之一，图片的添加是必要的。首先尝试使用原生markdown语法插入图片：<br><img src="/img/miku2_1.png" alt="miku2_2"></p><p>尺寸过大，效果不甚理想。由于md文件会被hexo编译为html，尝试使用<code>&lt;img&gt;</code>标签：<br><img src="/img/miku2_1.png" alt="miku2_1" width="80%" /></p><p>此方法可以通过调整width属性手动控制图片大小，但难以控制排版。阅读butterfly主题文档发现，主题允许使用gallery标签外挂图片：</p><div class="gallery-container" data-type="data" data-button="" data-limit="10" data-first="10">    <div class="gallery-items">[{"url":"/img/0831miku.00_03_33_58.Still002.jpg","alt":"","title":""},{"url":"/img/addiction.00_00_13_37.Still001.png","alt":"","title":""},{"url":"/img/miku2_1.png","alt":"","title":""},{"url":"/img/haila.png","alt":"","title":""}]</div>  </div><p>还是作者推荐的好使。</p><p><strong>ps：不是md和html的图怎么又炸了</strong></p><h2 id="主题美化"><a href="#主题美化" class="headerlink" title="主题美化"></a>主题美化</h2><p><strong>Butterfly主题预设了许多接口和开关，可以在_config.yml配置文件中修改以满足个性化需求。</strong></p><p>首先尝试更改默认头像，在博客根目录下创建<code>_config.butterfly.yml</code>文件，将<code>themes/butterfly/source/_config.yml</code>复制进来，hexo读取<code>_config.butterfly.yml</code>的优先级高于主题目录下的<code>_config.yml</code>，可更方便的调整主题配置。<br>依照文档指示，在<code>source</code>目录下创建<code>img</code>文件夹，导入图片，使用<code>img/xxx.jpg</code>的相对路径配置文件，发现无法在本地预览中生效，使用绝对路径<code>/img/xxx.jpg</code>仍不可显示，尝试使用浏览器直接访问图片地址：404，显然无论相对路径和绝对路径都存在问题，未能正确指向<code>img</code>中的图片。<br>观察<code>config</code>中的url路径，发现url: <code>https://MzyCf.github.io/project</code>，由此可知实际图片目录为<code>/project/img</code>，修改图片路径，成功在本地预览中显示。</p><h2 id="Github托管"><a href="#Github托管" class="headerlink" title="Github托管"></a>Github托管</h2><div class="gallery-container" data-type="data" data-button="" data-limit="10" data-first="10">    <div class="gallery-items">[{"url":"/img/Snipaste_2025-06-26_18-34-53.png","alt":"","title":""}]</div>  </div><strong>好消息：典中典坏消息：不会修</strong><p>经检查我的站点根目录是 <code>https://mzycf.github.io/</code>，但本地 <code>_config.yml</code> 里 root设置成了 <code>/project/</code> ，导致生成的资源路径错误，本地访问 <code>localhost:4000/project/</code>，但线上其实是根目录。因此，主题、Hexo 的静态资源（如 <code>/css/index.css</code>、<code>/js/main.js</code>）404，页面就会变成“纯文字无样式”。</p><h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><p>修改url设置如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url: https://mzycf.github.io</span><br><span class="line">root: /</span><br></pre></td></tr></table></figure><p>去掉所有路径下的<code>/project/</code>，确保本地和线上访问的根目录一致。</p><h2 id="更多问题将随持续开发不断更新"><a href="#更多问题将随持续开发不断更新" class="headerlink" title="更多问题将随持续开发不断更新"></a>更多问题将随持续开发不断更新</h2><h1 id="求关注"><a href="#求关注" class="headerlink" title="求关注"></a>求关注</h1><p>Bilibili主页：<a href="https://space.bilibili.com/470223779?spm_id_from=333.1387.0.0">Link Start</a></p><p>以上引用图片均出自本人之手，部分可在b站视频中找到</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 展示页 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docs </tag>
             
         </tags>
       
