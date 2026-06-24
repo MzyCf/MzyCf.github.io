@@ -4,6 +4,47 @@
   
     
     <entry>
+      <title>AI资讯日报 · 2026年6月23日</title>
+      <link href="/2026/06/23/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-23/"/>
+      <url>/2026/06/23/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-23/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>Anthropic 发布 Claude Tag——Agent 嵌入 Slack 成为团队”异步同事”（内部已写 65% 代码），Karpathy 称此为大模型 UI 第三范式；Prime Intellect 实现万亿参数 MoE 强化学习训练；OpenAI Daybreak 安全工具栈扩张；Apple container 项目让 Docker Desktop 在 Mac 上变成可选项</p></blockquote><h2 id="核心摘要"><a href="#核心摘要" class="headerlink" title="核心摘要"></a>核心摘要</h2><ul><li>**<a href="#claude-tag">Claude Tag 发布：Agent 嵌入 Slack 成为团队常驻成员</a>**：Claude 加入 Slack 作为团队成员，拥有频道&#x2F;工具访问权限。内部已编写产品团队 65% 代码，且构建了 Claude Tag 自身的大部分。Karpathy 称其为继网页版、桌面应用之后的”第三个大模型 UI 范式”——持久化、异步、嵌入组织的 Agent</li><li>**<a href="#prime-rl">Prime Intellect prime-rl v0.6.0：RL 训练万亿参数 MoE</a>**：支持 1T 参数 MoE 模型的强化学习训练，步进时间 &lt;5 分钟。在 GLM-5 agentic SWE 设置中 131k 上下文中 ~3 天完成 ~1k 步。Agent 训练正从算法问题变成基础设施问题</li><li>**<a href="#mistral-ocr">Mistral OCR 4：结构化 OCR 支持 170 种语言，但基准争议浮现</a>**：声称 SOTA 却在 OlmOCRBench 公共排行榜上排第 3，低于两个开源模型</li><li>**<a href="#agent-infra">Agent 基础设施从聊天机器人转向”异步同事”UX</a>**：OpenAI DevDay 2026 开启报名；Apple container 实现 Mac 免 Docker Desktop 运行 Linux 容器；Krea 2 开源完整 checkpoint；Microsoft FastContext 4B 子 Agent 实现主 Agent token 节省 46.5%</li></ul><h2 id="产品动态"><a href="#产品动态" class="headerlink" title="产品动态"></a>产品动态</h2><p><span id="claude-tag"></span></p><h3 id="Claude-Tag：Agent-嵌入-Slack-成为团队常驻”异步同事”，Karpathy-称此为大模型-UI-第三范式"><a href="#Claude-Tag：Agent-嵌入-Slack-成为团队常驻”异步同事”，Karpathy-称此为大模型-UI-第三范式" class="headerlink" title="Claude Tag：Agent 嵌入 Slack 成为团队常驻”异步同事”，Karpathy 称此为大模型 UI 第三范式"></a>Claude Tag：Agent 嵌入 Slack 成为团队常驻”异步同事”，Karpathy 称此为大模型 UI 第三范式</h3><p>Anthropic 发布 Claude Tag，这是从聊天机器人向持久化、异步、组织嵌入 Agent 转型的最明确产品信号。Claude 现在可以作为团队成员加入 Slack，拥有限定频道和工具访问权限。Anthropic 表示内部版本已编写产品团队 <strong>65% 的代码</strong>，包括构建 Claude Tag 自身的大部分工作。</p><p>关键使用场景不是”对话”，而是<strong>后台监控</strong>——启动&#x2F;指标监控、主动任务执行、在现有工作流中嵌入检查步骤。Andrej Karpathy 将此定位为LLM UI 的第三个主要范式：从网页版 → 桌面应用 → <strong>持久化实体在线与团队协同工作</strong>。</p><p>开源生态也在朝同一方向汇聚：StarAgent（tmux + Tailscale + Web 仪表板多路复用 Agent 会话）、Self-Harness（Agent 挖掘失败、提出 harness 变更、回归验证）、Hermes Agent 新增 <code>/learn</code> 命令（可摄入文档&#x2F;URL&#x2F;历史会话合成新 skill）、Executor 发布开源 MCP Gateway（进入 YC S26）。</p><p><strong>关键信息</strong>: Anthropic, Claude Tag, Slack, Agent, Karpathy, 异步协作</p><p><span id="openai-daybreak"></span></p><h3 id="OpenAI-Daybreak-扩张：Codex-安全插件-GPT-5-5-Cyber-完整版-网络合作伙伴计划"><a href="#OpenAI-Daybreak-扩张：Codex-安全插件-GPT-5-5-Cyber-完整版-网络合作伙伴计划" class="headerlink" title="OpenAI Daybreak 扩张：Codex 安全插件 + GPT-5.5-Cyber 完整版 + 网络合作伙伴计划"></a>OpenAI Daybreak 扩张：Codex 安全插件 + GPT-5.5-Cyber 完整版 + 网络合作伙伴计划</h3><p>OpenAI 宣布 Daybreak 安全计划重大扩张，四管齐下：</p><ol><li><strong>Codex Security 插件</strong>：在 Codex 内查找、验证和修复漏洞</li><li><strong>GPT-5.5-Cyber 完整版</strong>：面向可信防御者的专用安全模型</li><li><strong>Cyber Partner Program</strong>：将最先进的网络安全能力赋能领先安全公司的产品</li><li><strong>Patch the Planet</strong>：与维护者合作保护关键开源项目</li></ol><p><strong>关键信息</strong>: OpenAI, Daybreak, Codex Security, GPT-5.5-Cyber, 网络安全</p><p><span id="devday-2026"></span></p><h3 id="OpenAI-DevDay-2026-开放报名：9-29-旧金山"><a href="#OpenAI-DevDay-2026-开放报名：9-29-旧金山" class="headerlink" title="OpenAI DevDay 2026 开放报名：9&#x2F;29 旧金山"></a>OpenAI DevDay 2026 开放报名：9&#x2F;29 旧金山</h3><p>OpenAI DevDay 2026 已开放申请，9 月 29 日在旧金山举办，7 月 10 日截止申请。同时 OpenAI 宣布 GPT-5.5 Instant 健康问答能力已达 Thinking 模型水平，每周超 2.3 亿人使用 ChatGPT 咨询健康问题。</p><p><strong>关键信息</strong>: OpenAI, DevDay 2026, GPT-5.5 Instant, 开发者大会</p><p><span id="gdm-a24"></span></p><h3 id="Google-DeepMind-与-A24-电影公司建立研究合作"><a href="#Google-DeepMind-与-A24-电影公司建立研究合作" class="headerlink" title="Google DeepMind 与 A24 电影公司建立研究合作"></a>Google DeepMind 与 A24 电影公司建立研究合作</h3><p>Google DeepMind 宣布与独立电影公司 A24 建立研究合作伙伴关系，确保未来 AI 工具由创作者（creators）参与塑造。同时 Project Genie 团队斩获戛纳国际创意节（Cannes Lions）AI Craft 大奖。</p><p><strong>关键信息</strong>: Google DeepMind, A24, Project Genie, Cannes Lions</p><p><span id="interactions-api"></span></p><h3 id="Google-Interactions-API-正式发布（GA）：跨模型-跨-Agent-的统一编排"><a href="#Google-Interactions-API-正式发布（GA）：跨模型-跨-Agent-的统一编排" class="headerlink" title="Google Interactions API 正式发布（GA）：跨模型&#x2F;跨 Agent 的统一编排"></a>Google Interactions API 正式发布（GA）：跨模型&#x2F;跨 Agent 的统一编排</h3><p>Google 将 Interactions API 发布为 GA，这是面向 Agent 时代的新默认 API，支持在同一接口中编排多个模型和 Agent，为开发者提供跨模型的统一调度层。</p><p><strong>关键信息</strong>: Google, Interactions API, GA, 多Agent编排</p><p><span id="seedance-25"></span></p><h3 id="ByteDance-Seedance-2-5-发布：30-秒-4K-视频-50-个全模态参考素材"><a href="#ByteDance-Seedance-2-5-发布：30-秒-4K-视频-50-个全模态参考素材" class="headerlink" title="ByteDance Seedance 2.5 发布：30 秒 4K 视频 + 50 个全模态参考素材"></a>ByteDance Seedance 2.5 发布：30 秒 4K 视频 + 50 个全模态参考素材</h3><p>Seedance 2.5 支持 30 秒片段、原生 4K、50 个全模态参考素材（图片&#x2F;视频&#x2F;音频&#x2F;文本&#x2F;3D 白模），同时上线 AI 版权商业化平台。@linusekenstam 评价其”引领潮流”。</p><p><strong>关键信息</strong>: ByteDance, Seedance 2.5, 视频生成, 4K, 多模态</p><h2 id="工具框架"><a href="#工具框架" class="headerlink" title="工具框架"></a>工具框架</h2><p><span id="prime-rl"></span></p><h3 id="Prime-Intellect-prime-rl-v0-6-0：万亿参数-MoE-的-Agentic-RL-基础设施"><a href="#Prime-Intellect-prime-rl-v0-6-0：万亿参数-MoE-的-Agentic-RL-基础设施" class="headerlink" title="Prime Intellect prime-rl v0.6.0：万亿参数 MoE 的 Agentic RL 基础设施"></a>Prime Intellect prime-rl v0.6.0：万亿参数 MoE 的 Agentic RL 基础设施</h3><p>本周最具技术深度的系统发布。prime-rl v0.6.0 支持 <strong>1 万亿参数 MoE 模型</strong>的强化学习训练，步进时间 &lt;5 分钟，~3 天完成 ~1k 步。已在 <strong>GLM-5 agentic SWE</strong> 设置上验证，131k 上下文。优化覆盖推理（wide-EP、FP8 推理、Mooncake、KV-cache CPU offload）、训练（FSDP2、Deep-EP、FP8 训练、router replay）和 rollout 编排（重写核心、支持 GLM5&#x2F;Kimi&#x2F;Nemotron）。</p><p>W&amp;B&#x2F;OpenPipe 将 RL 吞吐度量重构为 <strong>trajectories&#x2F;sec（轨迹&#x2F;秒）</strong>而非传统的 tokens&#x2F;sec，在新 Megatron 后端上声称 <strong>12× 吞吐提升</strong>，4 GPU 上可达 ~35 轨迹&#x2F;秒（GRPO 类负载）。Vibrant Labs 发布 Ecom Bench——40 个任务的实时 Shopify 基准，确定性验证。</p><p><strong>核心趋势</strong>：Agent 训练正从算法问题变成基础设施问题——开放后训练栈 + 可验证环境 + 任务特化 rollout。</p><p><strong>关键信息</strong>: Prime Intellect, prime-rl, MoE, RL训练, GLM-5, 基础设施</p><p><span id="apple-container"></span></p><h3 id="Apple-container-项目：Docker-Desktop-在-Mac-上成为可选项"><a href="#Apple-container-项目：Docker-Desktop-在-Mac-上成为可选项" class="headerlink" title="Apple container 项目：Docker Desktop 在 Mac 上成为可选项"></a>Apple container 项目：Docker Desktop 在 Mac 上成为可选项</h3><p>Apple 的 <code>container</code> 项目引发巨大关注。功能集包括：Apple Silicon 上原生 Linux 容器、OCI 兼容、Swift 实现、Apache 2.0 许可，完全无需 Docker Desktop 守护进程或商业授权费用。对于本地 AI&#x2F;ML 开发场景，这意味着更轻量、无许可成本的容器方案。</p><p><strong>关键信息</strong>: Apple, container, Docker Desktop, Linux容器, Apple Silicon</p><p><span id="fastcontext"></span></p><h3 id="Microsoft-FastContext-1-0：4B-仓库探索子-Agent，主-Agent-token-节省-46-5"><a href="#Microsoft-FastContext-1-0：4B-仓库探索子-Agent，主-Agent-token-节省-46-5" class="headerlink" title="Microsoft FastContext-1.0：4B 仓库探索子 Agent，主 Agent token 节省 46.5%"></a>Microsoft FastContext-1.0：4B 仓库探索子 Agent，主 Agent token 节省 46.5%</h3><p>Microsoft 开源 FastContext-1.0，一个 4B 参数的仓库探索子 Agent（subagent），通过并行 READ&#x2F;GLOB&#x2F;GREP 调用返回紧凑的 file-path + line-range 引用。在 GPT-5.4 追踪中，代码库搜索&#x2F;读取占 56.2% 工具调用次数和 46.5% 主 Agent token。FastContext 在 SWE-bench Pro 上为 GPT-5.4 提升 +5.5 分。社区关注点在于它与基于 codegraph 的确定性方法相比，是否能可靠找到”怪异的跨文件依赖”。</p><p><strong>关键信息</strong>: Microsoft, FastContext, 子Agent, 仓库探索, token节省</p><p><span id="modal-endpoints"></span></p><h3 id="Modal-推出托管私有-LLM-端点-Latitude-发布-Agent-生产监控"><a href="#Modal-推出托管私有-LLM-端点-Latitude-发布-Agent-生产监控" class="headerlink" title="Modal 推出托管私有 LLM 端点 + Latitude 发布 Agent 生产监控"></a>Modal 推出托管私有 LLM 端点 + Latitude 发布 Agent 生产监控</h3><ul><li><strong>Modal</strong> 发布托管私有 LLM 端点（managed private endpoints），强调用户仍可访问底层代码而非黑箱服务</li><li><strong>Latitude</strong> 在 Agent 生产监控领域获好评：自动将重复失败合并为 issue、自然语言搜索生产对话、开源&#x2F;自托管可部署</li></ul><p><strong>关键信息</strong>: Modal, LLM端点, Latitude, Agent监控, 可观测性</p><h2 id="模型发布"><a href="#模型发布" class="headerlink" title="模型发布"></a>模型发布</h2><p><span id="mistral-ocr"></span></p><h3 id="Mistral-OCR-4：结构化-OCR-支持-170-种语言，但”类SOTA”声明存争议"><a href="#Mistral-OCR-4：结构化-OCR-支持-170-种语言，但”类SOTA”声明存争议" class="headerlink" title="Mistral OCR 4：结构化 OCR 支持 170 种语言，但”类SOTA”声明存争议"></a>Mistral OCR 4：结构化 OCR 支持 170 种语言，但”类SOTA”声明存争议</h3><p>Mistral 发布 OCR 4，声称实现带边界框（bounding boxes）、块分类、行内置信度评分的结构化 OCR，支持 170 种语言。但 @NielsRogge 指出 Mistral 的 OlmOCRBench “SOTA” 声明与 Hugging Face 公共排行榜不符——实际排名第 3，低于两个开源模型。Baidu Unlimited-OCR 同期登陆 HF，OCR 正成为突然升温的开源竞争前沿。</p><p><strong>关键信息</strong>: Mistral, OCR 4, 结构化OCR, Baidu, OlmOCRBench</p><p><span id="krea-2"></span></p><h3 id="Krea-2-开源完整权重：发布原始未蒸馏中期训练-checkpoint"><a href="#Krea-2-开源完整权重：发布原始未蒸馏中期训练-checkpoint" class="headerlink" title="Krea 2 开源完整权重：发布原始未蒸馏中期训练 checkpoint"></a>Krea 2 开源完整权重：发布原始未蒸馏中期训练 checkpoint</h3><p>Krea 2 开源两个 checkpoint：Krea 2 Raw（未蒸馏中期训练模型，适合微调和后训练）和 Krea 2 Turbo（蒸馏推理版）。这种”直接发布原始未蒸馏 checkpoint”的做法值得关注——给社区提供了一个真正可用于后训练的基座，而非仅提供打磨过的推理工件。Day-0 即获 Hugging Face diffusers 和 LoRA 生态支持。</p><p><strong>关键信息</strong>: Krea 2, 开源, 图像生成, 蒸馏, LoRA</p><h2 id="X平台动态"><a href="#X平台动态" class="headerlink" title="X平台动态"></a>X平台动态</h2><blockquote><p>过去 2 天精选</p></blockquote><h3 id="Claude-Tag-与-Agent-新范式"><a href="#Claude-Tag-与-Agent-新范式" class="headerlink" title="Claude Tag 与 Agent 新范式"></a>Claude Tag 与 Agent 新范式</h3><p><strong>@karpathy</strong>：<a href="https://x.com/karpathy/status/2069547676849557725">Claude Tag 是大模型 UI 的第三范式——从网页版、桌面应用到持久化实体在线与团队协同工作</a></p><blockquote><p>这是与 Claude 交互的一种新范式，显著更”内联”于组织内所有其他人类活动。一旦完成了底层工程工作使其”只管用”（跨工具、集成、计算环境、内存、安全等），Claude 就从”你去找它”变成了”它跟你们一起工作”。</p></blockquote><p><strong>@claudeai</strong>：<a href="https://x.com/claudeai/status/2069468693017268244">Claude Tag 发布——Claude 加入 Slack 作为团队成员，内部已编写产品团队 65% 代码</a></p><blockquote><p>Claude Tag 让团队以一种新方式与 Claude 协作。在 Slack 中，Claude 作为团队成员加入，拥有频道和工具访问权限。内部，Claude 已经编写了我们产品团队 65% 的代码。</p></blockquote><h3 id="开源模型与基础设施"><a href="#开源模型与基础设施" class="headerlink" title="开源模型与基础设施"></a>开源模型与基础设施</h3><p><strong>@jeremyphoward</strong>：<a href="https://x.com/jeremyphoward/status/2067757468189679764">GLM 5.2 是个奇迹——这是我第一次体验如此好的开源模型</a></p><blockquote><p>GLM 5.2 是个奇迹！至少和 Opus 4.8、GPT 5.5 一样好。超级快、便宜、不啰嗦，处理长上下文非常好。我从未体验过这样的开源权重模型。</p></blockquote><p><strong>@OfficialLoganK</strong>：<a href="https://x.com/OfficialLoganK/status/2069443708790132996">过去一个月，人们在 Google AI Studio 中创建了超过 100 万个原生 Android 应用</a></p><blockquote><p>有趣的统计：过去一个月内，人们在 Google AI Studio 中直接创建了超过 1,000,000 个原生 Android 应用！！巨大的进步，看到人们构建的广度太酷了。</p></blockquote><h3 id="安全与政策"><a href="#安全与政策" class="headerlink" title="安全与政策"></a>安全与政策</h3><p><strong>@yoshua_bengio</strong>：<a href="https://x.com/yoshua_bengio/status/2069130050264269247">新论文——AI Agent 对可见激励的贪婪可能导致它们放弃安全对齐</a></p><blockquote><p>我最近博士毕业生的一篇有趣的论文——关于 AI Agent 对可见激励的贪婪如何导致它们放弃安全对齐。</p></blockquote><p><strong>@linusekenstam</strong>：<a href="https://x.com/linusekenstam/status/2069291288990474240">ByteDance Seedance 2.5——30 秒片段、原生 4K、50 个全模态参考素材</a></p><blockquote><p>Seedance 2.5 🤯 → 30 秒片段 → 原生 4K → 支持 50 个全模态参考素材，疯狂 → 支持 3D 白模。同时上线 AI 版权商业化平台。ByteDance 在这方面领先。</p></blockquote><h3 id="工具与工作流"><a href="#工具与工作流" class="headerlink" title="工具与工作流"></a>工具与工作流</h3><p><strong>@simonw</strong>：<a href="https://x.com/simonw/status/2069206810960298048">用 Claude Code 将 Moebius 图像定位模型移植到 ONNX 以在浏览器中完全运行</a></p><blockquote><p>我今天的并行 Agent 副项目是让 Claude Code 将新的 Moebius 图像定位模型移植到 ONNX，以便完全在浏览器中运行。</p></blockquote><h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><p>#ClaudeTag #AgentInfra #PrimeRL #MistralOCR #GLM5_2 #OpenAI #AppleContainer #FastContext</p><hr><p>数据来源: smol.ai, X&#x2F;Twitter (twitterapi.io) | 生成时间: 2026-06-24 08:00</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 资讯 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AI </tag>
+            
+            <tag> 资讯 </tag>
+            
+            <tag> 日报 </tag>
+            
+            <tag> Agent </tag>
+            
+            <tag> X平台 </tag>
+            
+            <tag> ClaudeTag </tag>
+            
+            <tag> prime-rl </tag>
+            
+            <tag> MistralOCR </tag>
+            
+            <tag> OpenAI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>AI资讯日报 · 2026年6月18日</title>
       <link href="/2026/06/18/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-18/"/>
       <url>/2026/06/18/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-18/</url>
@@ -32,9 +73,9 @@
             
             <tag> X平台 </tag>
             
-            <tag> 具身智能 </tag>
-            
             <tag> GLM5.2 </tag>
+            
+            <tag> 具身智能 </tag>
             
             <tag> LifeSciBench </tag>
             
@@ -61,9 +102,9 @@
       
         <tags>
             
-            <tag> 复习 </tag>
-            
             <tag> 数据结构 </tag>
+            
+            <tag> 复习 </tag>
             
             <tag> 栈与队列 </tag>
             
@@ -182,9 +223,9 @@
             
             <tag> X平台 </tag>
             
-            <tag> WWDC </tag>
-            
             <tag> 具身智能 </tag>
+            
+            <tag> WWDC </tag>
             
             <tag> IPO </tag>
             
@@ -223,13 +264,13 @@
             
             <tag> 开源 </tag>
             
-            <tag> X平台 </tag>
-            
             <tag> Mythos </tag>
             
             <tag> Gemma4 </tag>
             
             <tag> RSI </tag>
+            
+            <tag> X平台 </tag>
             
         </tags>
       
@@ -342,9 +383,9 @@
             
             <tag> Anthropic </tag>
             
-            <tag> EmbodiedAI </tag>
-            
             <tag> X平台 </tag>
+            
+            <tag> EmbodiedAI </tag>
             
             <tag> Humanoid </tag>
             
@@ -435,13 +476,13 @@
             
             <tag> Anthropic </tag>
             
-            <tag> EmbodiedAI </tag>
-            
             <tag> RobotLearning </tag>
             
-            <tag> MCP </tag>
-            
             <tag> X平台 </tag>
+            
+            <tag> EmbodiedAI </tag>
+            
+            <tag> MCP </tag>
             
         </tags>
       

@@ -1,0 +1,479 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>AI资讯日报 · 2026年6月23日 | Ciallo～(∠・ω&lt; )⌒☆</title><meta name="author" content="丛雨丛雨丛"><meta name="copyright" content="丛雨丛雨丛"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Anthropic 发布 Claude Tag——Agent 嵌入 Slack 成为团队”异步同事”（内部已写 65% 代码），Karpathy 称此为大模型 UI 第三范式；Prime Intellect 实现万亿参数 MoE 强化学习训练；OpenAI Daybreak 安全工具栈扩张；Apple container 项目让 Docker Desktop 在 Mac 上变成可选项  核心摘要">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI资讯日报 · 2026年6月23日">
+<meta property="og:url" content="https://mzycf.github.io/2026/06/23/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-23/index.html">
+<meta property="og:site_name" content="Ciallo～(∠・ω&lt; )⌒☆">
+<meta property="og:description" content="Anthropic 发布 Claude Tag——Agent 嵌入 Slack 成为团队”异步同事”（内部已写 65% 代码），Karpathy 称此为大模型 UI 第三范式；Prime Intellect 实现万亿参数 MoE 强化学习训练；OpenAI Daybreak 安全工具栈扩张；Apple container 项目让 Docker Desktop 在 Mac 上变成可选项  核心摘要">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://mzycf.github.io/img/ai-daily-cover.jpg">
+<meta property="article:published_time" content="2026-06-23T00:00:00.000Z">
+<meta property="article:modified_time" content="2026-06-24T05:04:01.384Z">
+<meta property="article:author" content="丛雨丛雨丛">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="资讯">
+<meta property="article:tag" content="日报">
+<meta property="article:tag" content="Agent">
+<meta property="article:tag" content="X平台">
+<meta property="article:tag" content="ClaudeTag">
+<meta property="article:tag" content="prime-rl">
+<meta property="article:tag" content="MistralOCR">
+<meta property="article:tag" content="OpenAI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mzycf.github.io/img/ai-daily-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AI资讯日报 · 2026年6月23日",
+  "url": "https://mzycf.github.io/2026/06/23/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-23/",
+  "image": "https://mzycf.github.io/img/ai-daily-cover.jpg",
+  "datePublished": "2026-06-23T00:00:00.000Z",
+  "dateModified": "2026-06-24T05:04:01.384Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "丛雨丛雨丛",
+      "url": "https://github.com/MzyCf"
+    }
+  ]
+}</script><link rel="shortcut icon" href="https://lstyimgbed.cn/Icon/fv542-wndck-001.ico"><link rel="canonical" href="https://mzycf.github.io/2026/06/23/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-23/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/css/lib/font-awesome-6.7.2-all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":-1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'AI资讯日报 · 2026年6月23日',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/universe.css"><link rel="stylesheet" href="/css/lib/element-ui-2.15.6.min.css"><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div class="bg-animation" id="web_bg" style="background-image: url(/img/Luo-8th.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://lstyimgbed.cn/Icon/transparent_100x100.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">68</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 光锥</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/ai-daily-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/img/Murasame-icon.png" alt="Logo"><span class="site-name">Ciallo～(∠・ω&lt; )⌒☆</span></a><a class="nav-page-title" href="/"><span class="site-name">AI资讯日报 · 2026年6月23日</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 光锥</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">AI资讯日报 · 2026年6月23日</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-06-23T00:00:00.000Z" title="发表于 2026-06-23 08:00:00">2026-06-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-06-24T05:04:01.384Z" title="更新于 2026-06-24 13:04:01">2026-06-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%B5%84%E8%AE%AF/">资讯</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">2.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>Anthropic 发布 Claude Tag——Agent 嵌入 Slack 成为团队”异步同事”（内部已写 65% 代码），Karpathy 称此为大模型 UI 第三范式；Prime Intellect 实现万亿参数 MoE 强化学习训练；OpenAI Daybreak 安全工具栈扩张；Apple container 项目让 Docker Desktop 在 Mac 上变成可选项</p>
+</blockquote>
+<h2 id="核心摘要"><a href="#核心摘要" class="headerlink" title="核心摘要"></a>核心摘要</h2><ul>
+<li>**<a href="#claude-tag">Claude Tag 发布：Agent 嵌入 Slack 成为团队常驻成员</a>**：Claude 加入 Slack 作为团队成员，拥有频道&#x2F;工具访问权限。内部已编写产品团队 65% 代码，且构建了 Claude Tag 自身的大部分。Karpathy 称其为继网页版、桌面应用之后的”第三个大模型 UI 范式”——持久化、异步、嵌入组织的 Agent</li>
+<li>**<a href="#prime-rl">Prime Intellect prime-rl v0.6.0：RL 训练万亿参数 MoE</a>**：支持 1T 参数 MoE 模型的强化学习训练，步进时间 &lt;5 分钟。在 GLM-5 agentic SWE 设置中 131k 上下文中 ~3 天完成 ~1k 步。Agent 训练正从算法问题变成基础设施问题</li>
+<li>**<a href="#mistral-ocr">Mistral OCR 4：结构化 OCR 支持 170 种语言，但基准争议浮现</a>**：声称 SOTA 却在 OlmOCRBench 公共排行榜上排第 3，低于两个开源模型</li>
+<li>**<a href="#agent-infra">Agent 基础设施从聊天机器人转向”异步同事”UX</a>**：OpenAI DevDay 2026 开启报名；Apple container 实现 Mac 免 Docker Desktop 运行 Linux 容器；Krea 2 开源完整 checkpoint；Microsoft FastContext 4B 子 Agent 实现主 Agent token 节省 46.5%</li>
+</ul>
+<h2 id="产品动态"><a href="#产品动态" class="headerlink" title="产品动态"></a>产品动态</h2><p><span id="claude-tag"></span></p>
+<h3 id="Claude-Tag：Agent-嵌入-Slack-成为团队常驻”异步同事”，Karpathy-称此为大模型-UI-第三范式"><a href="#Claude-Tag：Agent-嵌入-Slack-成为团队常驻”异步同事”，Karpathy-称此为大模型-UI-第三范式" class="headerlink" title="Claude Tag：Agent 嵌入 Slack 成为团队常驻”异步同事”，Karpathy 称此为大模型 UI 第三范式"></a>Claude Tag：Agent 嵌入 Slack 成为团队常驻”异步同事”，Karpathy 称此为大模型 UI 第三范式</h3><p>Anthropic 发布 Claude Tag，这是从聊天机器人向持久化、异步、组织嵌入 Agent 转型的最明确产品信号。Claude 现在可以作为团队成员加入 Slack，拥有限定频道和工具访问权限。Anthropic 表示内部版本已编写产品团队 <strong>65% 的代码</strong>，包括构建 Claude Tag 自身的大部分工作。</p>
+<p>关键使用场景不是”对话”，而是<strong>后台监控</strong>——启动&#x2F;指标监控、主动任务执行、在现有工作流中嵌入检查步骤。Andrej Karpathy 将此定位为LLM UI 的第三个主要范式：从网页版 → 桌面应用 → <strong>持久化实体在线与团队协同工作</strong>。</p>
+<p>开源生态也在朝同一方向汇聚：StarAgent（tmux + Tailscale + Web 仪表板多路复用 Agent 会话）、Self-Harness（Agent 挖掘失败、提出 harness 变更、回归验证）、Hermes Agent 新增 <code>/learn</code> 命令（可摄入文档&#x2F;URL&#x2F;历史会话合成新 skill）、Executor 发布开源 MCP Gateway（进入 YC S26）。</p>
+<p><strong>关键信息</strong>: Anthropic, Claude Tag, Slack, Agent, Karpathy, 异步协作</p>
+<p><span id="openai-daybreak"></span></p>
+<h3 id="OpenAI-Daybreak-扩张：Codex-安全插件-GPT-5-5-Cyber-完整版-网络合作伙伴计划"><a href="#OpenAI-Daybreak-扩张：Codex-安全插件-GPT-5-5-Cyber-完整版-网络合作伙伴计划" class="headerlink" title="OpenAI Daybreak 扩张：Codex 安全插件 + GPT-5.5-Cyber 完整版 + 网络合作伙伴计划"></a>OpenAI Daybreak 扩张：Codex 安全插件 + GPT-5.5-Cyber 完整版 + 网络合作伙伴计划</h3><p>OpenAI 宣布 Daybreak 安全计划重大扩张，四管齐下：</p>
+<ol>
+<li><strong>Codex Security 插件</strong>：在 Codex 内查找、验证和修复漏洞</li>
+<li><strong>GPT-5.5-Cyber 完整版</strong>：面向可信防御者的专用安全模型</li>
+<li><strong>Cyber Partner Program</strong>：将最先进的网络安全能力赋能领先安全公司的产品</li>
+<li><strong>Patch the Planet</strong>：与维护者合作保护关键开源项目</li>
+</ol>
+<p><strong>关键信息</strong>: OpenAI, Daybreak, Codex Security, GPT-5.5-Cyber, 网络安全</p>
+<p><span id="devday-2026"></span></p>
+<h3 id="OpenAI-DevDay-2026-开放报名：9-29-旧金山"><a href="#OpenAI-DevDay-2026-开放报名：9-29-旧金山" class="headerlink" title="OpenAI DevDay 2026 开放报名：9&#x2F;29 旧金山"></a>OpenAI DevDay 2026 开放报名：9&#x2F;29 旧金山</h3><p>OpenAI DevDay 2026 已开放申请，9 月 29 日在旧金山举办，7 月 10 日截止申请。同时 OpenAI 宣布 GPT-5.5 Instant 健康问答能力已达 Thinking 模型水平，每周超 2.3 亿人使用 ChatGPT 咨询健康问题。</p>
+<p><strong>关键信息</strong>: OpenAI, DevDay 2026, GPT-5.5 Instant, 开发者大会</p>
+<p><span id="gdm-a24"></span></p>
+<h3 id="Google-DeepMind-与-A24-电影公司建立研究合作"><a href="#Google-DeepMind-与-A24-电影公司建立研究合作" class="headerlink" title="Google DeepMind 与 A24 电影公司建立研究合作"></a>Google DeepMind 与 A24 电影公司建立研究合作</h3><p>Google DeepMind 宣布与独立电影公司 A24 建立研究合作伙伴关系，确保未来 AI 工具由创作者（creators）参与塑造。同时 Project Genie 团队斩获戛纳国际创意节（Cannes Lions）AI Craft 大奖。</p>
+<p><strong>关键信息</strong>: Google DeepMind, A24, Project Genie, Cannes Lions</p>
+<p><span id="interactions-api"></span></p>
+<h3 id="Google-Interactions-API-正式发布（GA）：跨模型-跨-Agent-的统一编排"><a href="#Google-Interactions-API-正式发布（GA）：跨模型-跨-Agent-的统一编排" class="headerlink" title="Google Interactions API 正式发布（GA）：跨模型&#x2F;跨 Agent 的统一编排"></a>Google Interactions API 正式发布（GA）：跨模型&#x2F;跨 Agent 的统一编排</h3><p>Google 将 Interactions API 发布为 GA，这是面向 Agent 时代的新默认 API，支持在同一接口中编排多个模型和 Agent，为开发者提供跨模型的统一调度层。</p>
+<p><strong>关键信息</strong>: Google, Interactions API, GA, 多Agent编排</p>
+<p><span id="seedance-25"></span></p>
+<h3 id="ByteDance-Seedance-2-5-发布：30-秒-4K-视频-50-个全模态参考素材"><a href="#ByteDance-Seedance-2-5-发布：30-秒-4K-视频-50-个全模态参考素材" class="headerlink" title="ByteDance Seedance 2.5 发布：30 秒 4K 视频 + 50 个全模态参考素材"></a>ByteDance Seedance 2.5 发布：30 秒 4K 视频 + 50 个全模态参考素材</h3><p>Seedance 2.5 支持 30 秒片段、原生 4K、50 个全模态参考素材（图片&#x2F;视频&#x2F;音频&#x2F;文本&#x2F;3D 白模），同时上线 AI 版权商业化平台。@linusekenstam 评价其”引领潮流”。</p>
+<p><strong>关键信息</strong>: ByteDance, Seedance 2.5, 视频生成, 4K, 多模态</p>
+<h2 id="工具框架"><a href="#工具框架" class="headerlink" title="工具框架"></a>工具框架</h2><p><span id="prime-rl"></span></p>
+<h3 id="Prime-Intellect-prime-rl-v0-6-0：万亿参数-MoE-的-Agentic-RL-基础设施"><a href="#Prime-Intellect-prime-rl-v0-6-0：万亿参数-MoE-的-Agentic-RL-基础设施" class="headerlink" title="Prime Intellect prime-rl v0.6.0：万亿参数 MoE 的 Agentic RL 基础设施"></a>Prime Intellect prime-rl v0.6.0：万亿参数 MoE 的 Agentic RL 基础设施</h3><p>本周最具技术深度的系统发布。prime-rl v0.6.0 支持 <strong>1 万亿参数 MoE 模型</strong>的强化学习训练，步进时间 &lt;5 分钟，~3 天完成 ~1k 步。已在 <strong>GLM-5 agentic SWE</strong> 设置上验证，131k 上下文。优化覆盖推理（wide-EP、FP8 推理、Mooncake、KV-cache CPU offload）、训练（FSDP2、Deep-EP、FP8 训练、router replay）和 rollout 编排（重写核心、支持 GLM5&#x2F;Kimi&#x2F;Nemotron）。</p>
+<p>W&amp;B&#x2F;OpenPipe 将 RL 吞吐度量重构为 <strong>trajectories&#x2F;sec（轨迹&#x2F;秒）</strong>而非传统的 tokens&#x2F;sec，在新 Megatron 后端上声称 <strong>12× 吞吐提升</strong>，4 GPU 上可达 ~35 轨迹&#x2F;秒（GRPO 类负载）。Vibrant Labs 发布 Ecom Bench——40 个任务的实时 Shopify 基准，确定性验证。</p>
+<p><strong>核心趋势</strong>：Agent 训练正从算法问题变成基础设施问题——开放后训练栈 + 可验证环境 + 任务特化 rollout。</p>
+<p><strong>关键信息</strong>: Prime Intellect, prime-rl, MoE, RL训练, GLM-5, 基础设施</p>
+<p><span id="apple-container"></span></p>
+<h3 id="Apple-container-项目：Docker-Desktop-在-Mac-上成为可选项"><a href="#Apple-container-项目：Docker-Desktop-在-Mac-上成为可选项" class="headerlink" title="Apple container 项目：Docker Desktop 在 Mac 上成为可选项"></a>Apple container 项目：Docker Desktop 在 Mac 上成为可选项</h3><p>Apple 的 <code>container</code> 项目引发巨大关注。功能集包括：Apple Silicon 上原生 Linux 容器、OCI 兼容、Swift 实现、Apache 2.0 许可，完全无需 Docker Desktop 守护进程或商业授权费用。对于本地 AI&#x2F;ML 开发场景，这意味着更轻量、无许可成本的容器方案。</p>
+<p><strong>关键信息</strong>: Apple, container, Docker Desktop, Linux容器, Apple Silicon</p>
+<p><span id="fastcontext"></span></p>
+<h3 id="Microsoft-FastContext-1-0：4B-仓库探索子-Agent，主-Agent-token-节省-46-5"><a href="#Microsoft-FastContext-1-0：4B-仓库探索子-Agent，主-Agent-token-节省-46-5" class="headerlink" title="Microsoft FastContext-1.0：4B 仓库探索子 Agent，主 Agent token 节省 46.5%"></a>Microsoft FastContext-1.0：4B 仓库探索子 Agent，主 Agent token 节省 46.5%</h3><p>Microsoft 开源 FastContext-1.0，一个 4B 参数的仓库探索子 Agent（subagent），通过并行 READ&#x2F;GLOB&#x2F;GREP 调用返回紧凑的 file-path + line-range 引用。在 GPT-5.4 追踪中，代码库搜索&#x2F;读取占 56.2% 工具调用次数和 46.5% 主 Agent token。FastContext 在 SWE-bench Pro 上为 GPT-5.4 提升 +5.5 分。社区关注点在于它与基于 codegraph 的确定性方法相比，是否能可靠找到”怪异的跨文件依赖”。</p>
+<p><strong>关键信息</strong>: Microsoft, FastContext, 子Agent, 仓库探索, token节省</p>
+<p><span id="modal-endpoints"></span></p>
+<h3 id="Modal-推出托管私有-LLM-端点-Latitude-发布-Agent-生产监控"><a href="#Modal-推出托管私有-LLM-端点-Latitude-发布-Agent-生产监控" class="headerlink" title="Modal 推出托管私有 LLM 端点 + Latitude 发布 Agent 生产监控"></a>Modal 推出托管私有 LLM 端点 + Latitude 发布 Agent 生产监控</h3><ul>
+<li><strong>Modal</strong> 发布托管私有 LLM 端点（managed private endpoints），强调用户仍可访问底层代码而非黑箱服务</li>
+<li><strong>Latitude</strong> 在 Agent 生产监控领域获好评：自动将重复失败合并为 issue、自然语言搜索生产对话、开源&#x2F;自托管可部署</li>
+</ul>
+<p><strong>关键信息</strong>: Modal, LLM端点, Latitude, Agent监控, 可观测性</p>
+<h2 id="模型发布"><a href="#模型发布" class="headerlink" title="模型发布"></a>模型发布</h2><p><span id="mistral-ocr"></span></p>
+<h3 id="Mistral-OCR-4：结构化-OCR-支持-170-种语言，但”类SOTA”声明存争议"><a href="#Mistral-OCR-4：结构化-OCR-支持-170-种语言，但”类SOTA”声明存争议" class="headerlink" title="Mistral OCR 4：结构化 OCR 支持 170 种语言，但”类SOTA”声明存争议"></a>Mistral OCR 4：结构化 OCR 支持 170 种语言，但”类SOTA”声明存争议</h3><p>Mistral 发布 OCR 4，声称实现带边界框（bounding boxes）、块分类、行内置信度评分的结构化 OCR，支持 170 种语言。但 @NielsRogge 指出 Mistral 的 OlmOCRBench “SOTA” 声明与 Hugging Face 公共排行榜不符——实际排名第 3，低于两个开源模型。Baidu Unlimited-OCR 同期登陆 HF，OCR 正成为突然升温的开源竞争前沿。</p>
+<p><strong>关键信息</strong>: Mistral, OCR 4, 结构化OCR, Baidu, OlmOCRBench</p>
+<p><span id="krea-2"></span></p>
+<h3 id="Krea-2-开源完整权重：发布原始未蒸馏中期训练-checkpoint"><a href="#Krea-2-开源完整权重：发布原始未蒸馏中期训练-checkpoint" class="headerlink" title="Krea 2 开源完整权重：发布原始未蒸馏中期训练 checkpoint"></a>Krea 2 开源完整权重：发布原始未蒸馏中期训练 checkpoint</h3><p>Krea 2 开源两个 checkpoint：Krea 2 Raw（未蒸馏中期训练模型，适合微调和后训练）和 Krea 2 Turbo（蒸馏推理版）。这种”直接发布原始未蒸馏 checkpoint”的做法值得关注——给社区提供了一个真正可用于后训练的基座，而非仅提供打磨过的推理工件。Day-0 即获 Hugging Face diffusers 和 LoRA 生态支持。</p>
+<p><strong>关键信息</strong>: Krea 2, 开源, 图像生成, 蒸馏, LoRA</p>
+<h2 id="X平台动态"><a href="#X平台动态" class="headerlink" title="X平台动态"></a>X平台动态</h2><blockquote>
+<p>过去 2 天精选</p>
+</blockquote>
+<h3 id="Claude-Tag-与-Agent-新范式"><a href="#Claude-Tag-与-Agent-新范式" class="headerlink" title="Claude Tag 与 Agent 新范式"></a>Claude Tag 与 Agent 新范式</h3><p><strong>@karpathy</strong>：<a target="_blank" rel="noopener" href="https://x.com/karpathy/status/2069547676849557725">Claude Tag 是大模型 UI 的第三范式——从网页版、桌面应用到持久化实体在线与团队协同工作</a></p>
+<blockquote>
+<p>这是与 Claude 交互的一种新范式，显著更”内联”于组织内所有其他人类活动。一旦完成了底层工程工作使其”只管用”（跨工具、集成、计算环境、内存、安全等），Claude 就从”你去找它”变成了”它跟你们一起工作”。</p>
+</blockquote>
+<p><strong>@claudeai</strong>：<a target="_blank" rel="noopener" href="https://x.com/claudeai/status/2069468693017268244">Claude Tag 发布——Claude 加入 Slack 作为团队成员，内部已编写产品团队 65% 代码</a></p>
+<blockquote>
+<p>Claude Tag 让团队以一种新方式与 Claude 协作。在 Slack 中，Claude 作为团队成员加入，拥有频道和工具访问权限。内部，Claude 已经编写了我们产品团队 65% 的代码。</p>
+</blockquote>
+<h3 id="开源模型与基础设施"><a href="#开源模型与基础设施" class="headerlink" title="开源模型与基础设施"></a>开源模型与基础设施</h3><p><strong>@jeremyphoward</strong>：<a target="_blank" rel="noopener" href="https://x.com/jeremyphoward/status/2067757468189679764">GLM 5.2 是个奇迹——这是我第一次体验如此好的开源模型</a></p>
+<blockquote>
+<p>GLM 5.2 是个奇迹！至少和 Opus 4.8、GPT 5.5 一样好。超级快、便宜、不啰嗦，处理长上下文非常好。我从未体验过这样的开源权重模型。</p>
+</blockquote>
+<p><strong>@OfficialLoganK</strong>：<a target="_blank" rel="noopener" href="https://x.com/OfficialLoganK/status/2069443708790132996">过去一个月，人们在 Google AI Studio 中创建了超过 100 万个原生 Android 应用</a></p>
+<blockquote>
+<p>有趣的统计：过去一个月内，人们在 Google AI Studio 中直接创建了超过 1,000,000 个原生 Android 应用！！巨大的进步，看到人们构建的广度太酷了。</p>
+</blockquote>
+<h3 id="安全与政策"><a href="#安全与政策" class="headerlink" title="安全与政策"></a>安全与政策</h3><p><strong>@yoshua_bengio</strong>：<a target="_blank" rel="noopener" href="https://x.com/yoshua_bengio/status/2069130050264269247">新论文——AI Agent 对可见激励的贪婪可能导致它们放弃安全对齐</a></p>
+<blockquote>
+<p>我最近博士毕业生的一篇有趣的论文——关于 AI Agent 对可见激励的贪婪如何导致它们放弃安全对齐。</p>
+</blockquote>
+<p><strong>@linusekenstam</strong>：<a target="_blank" rel="noopener" href="https://x.com/linusekenstam/status/2069291288990474240">ByteDance Seedance 2.5——30 秒片段、原生 4K、50 个全模态参考素材</a></p>
+<blockquote>
+<p>Seedance 2.5 🤯 → 30 秒片段 → 原生 4K → 支持 50 个全模态参考素材，疯狂 → 支持 3D 白模。同时上线 AI 版权商业化平台。ByteDance 在这方面领先。</p>
+</blockquote>
+<h3 id="工具与工作流"><a href="#工具与工作流" class="headerlink" title="工具与工作流"></a>工具与工作流</h3><p><strong>@simonw</strong>：<a target="_blank" rel="noopener" href="https://x.com/simonw/status/2069206810960298048">用 Claude Code 将 Moebius 图像定位模型移植到 ONNX 以在浏览器中完全运行</a></p>
+<blockquote>
+<p>我今天的并行 Agent 副项目是让 Claude Code 将新的 Moebius 图像定位模型移植到 ONNX，以便完全在浏览器中运行。</p>
+</blockquote>
+<h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><p>#ClaudeTag #AgentInfra #PrimeRL #MistralOCR #GLM5_2 #OpenAI #AppleContainer #FastContext</p>
+<hr>
+<p>数据来源: smol.ai, X&#x2F;Twitter (twitterapi.io) | 生成时间: 2026-06-24 08:00</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a target="_blank" rel="noopener" href="https://github.com/MzyCf">丛雨丛雨丛</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://mzycf.github.io/2026/06/23/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-23/">https://mzycf.github.io/2026/06/23/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-23/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://MzyCf.github.io" target="_blank">Ciallo～(∠・ω< )⌒☆</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/AI/">AI</a><a class="post-meta__tags" href="/tags/%E8%B5%84%E8%AE%AF/">资讯</a><a class="post-meta__tags" href="/tags/%E6%97%A5%E6%8A%A5/">日报</a><a class="post-meta__tags" href="/tags/Agent/">Agent</a><a class="post-meta__tags" href="/tags/X%E5%B9%B3%E5%8F%B0/">X平台</a><a class="post-meta__tags" href="/tags/ClaudeTag/">ClaudeTag</a><a class="post-meta__tags" href="/tags/prime-rl/">prime-rl</a><a class="post-meta__tags" href="/tags/MistralOCR/">MistralOCR</a><a class="post-meta__tags" href="/tags/OpenAI/">OpenAI</a></div><div class="post-share"><div class="social-share" data-image="/img/ai-daily-cover.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/06/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0/" title="数据结构复习（期末考试）"><img class="cover" src="https://lstyimgbed.cn/PicGo/cover-3.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">数据结构复习（期末考试）</div></div><div class="info-2"><div class="info-item-1">数据结构复习（期末考试） 教材：严蔚敏《数据结构（C 语言版）》基于老师划定的考试范围整理   一、绪论（基础概念） 1.1 数据结构三要素   要素 说明 例子    逻辑结构 数据元素之间的逻辑关系 线性（栈&#x2F;队列）、树形（一对多）、图状（多对多）、集合   存储结构 数据在计算机中的存放方式 顺序存储、链式存储、索引存储、散列存储   数据运算 对数据进行的操作 增、删、改、查、排序    1.2 算法五大特性 口诀：有确定可行出入     特性 含义    有穷性 算法在有限步后终止   确定性 每条指令有确切含义，无二义性   可行性 每条操作都是基本可执行的   输入 有 0 个或多个输入   输出 有 1 个或多个输出    1.3 时间复杂度计算常见的数量级（由小到大）： [O(1) &lt; O(\log_2 n) &lt; O(n) &lt; O(n\log_2 n) &lt; O(n^2) &lt; O(n^3) &lt; O(2^n) &lt; O(n!)]    代码形式 复杂度    单循环 for(i=0;i&lt;n;i++) (O(n)...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/06/06/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-06/" title="AI资讯日报 · 2026年6月6日"><img class="cover" src="/img/ai-daily-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-06-06</div><div class="info-item-2">AI资讯日报 · 2026年6月6日</div></div><div class="info-2"><div class="info-item-1"> Anthropic 披露 Claude 加速 AI 研发形成递归自我改进（RSI）趋势，Sakana AI 成立 RSI Lab，Gemma 4 QAT 量化版大幅降低本地部署门槛，Ideogram 4 开源领跑图像生成，Agent 基准从代码片段转向经济级长程任务  核心摘要 **递归自我改进（RSI）从理论走向组织战略**：Anthropic 内部数据显示 Claude 正加速 AI 开发——AI 自主构建更强继任者的闭环正在形成；Sakana AI 在东京成立 RSI Lab，强调样本效率而非仅靠超大规模算力 **Gemma 4 QAT 量化版发布**：Google 发布全系列量化感知训练（QAT）checkpoint，E2B 模型仅需约 1GB 内存即可运行，Ollama、vLLM 即时适配 **Ideogram 4 开源图像模型领跑**：9.3B Diffusion Transformer 开源 fp8&#x2F;nf4 checkpoint，nf4 版本单张 24GB GPU 可运行，Arena 评为领先的开源权重图像模型 **Agent 基准升级：从代码片段到经济...</div></div></div></a><a class="pagination-related" href="/2026/06/18/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-18/" title="AI资讯日报 · 2026年6月18日"><img class="cover" src="/img/ai-daily-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-06-18</div><div class="info-item-2">AI资讯日报 · 2026年6月18日</div></div><div class="info-2"><div class="info-item-1"> GLM 5.2 开源模型获评”匹敌 Opus 4.8&#x2F;GPT 5.5”引爆社区；Jim Fan 团队实现全球首次物理世界 AutoResearch——8 个 Codex Agent 操控机器人舰队自主科研；OpenAI 发布 LifeSciBench 联手 173 名科学家；Anthropic Project Fetch 展示 Claude 编程机器狗，速度超人类团队 20 倍  具身智能 从 #EmbodiedAI、#Humanoid、#RobotLearning 追踪的最新动态   ENPIRE：全球首次物理世界 AutoResearch——8 个 Codex Agent 操控机器人舰队Jim Fan（NVIDIA）团队实现全球首次 Physical AutoResearch。ENPIRE 系统赋予 8 个 Codex Agent 一支机器人舰队、GPU 分配和慷慨 token 预算，目标是自主完成物理实验任务。Jim Fan 在幕后分享中强调安全 harness 是第一优先——8 台机器人无人值守运行时需要多层安全防护。4 年前 MineDojo 获 NeurI...</div></div></div></a><a class="pagination-related" href="/2026/05/20/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-05-20/" title="AI资讯日报 · 2026年5月20日"><img class="cover" src="/img/ai-daily-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-20</div><div class="info-item-2">AI资讯日报 · 2026年5月20日</div></div><div class="info-2"><div class="info-item-1"> Google I&#x2F;O 2026 余波持续：Gemini 3.5 Flash Agent&#x2F;Coding 最强模型正式 GA，Antigravity Managed Agents 开放 API；OpenAI 宣布数学突破；Hassabis 预测 2029&#x2F;30 AGI；MCP 生态日活持续升温  具身智能 从 #EmbodiedAI、#RobotLearning、#Humanoid、#Sim2Real 标签中精选的具身智能领域最新动态   远程操作 + 具身 AI 数据管线：Teleoperation 成为人-机技能迁移核心范式社区关注 Teleoperation（远程操作）作为具身 AI 数据采集的关键路径：人类远程控制机器人手臂收集真实运动数据，AI 从中学习自主复现任务。Alicia-D Leader Arm（730g 轻量级机械臂）作为遥操作输入端引发讨论。同时有开发者分享了家庭任务视频采集与上传端到端管线（device → storage），主要工程挑战在边缘场景处理。 关键信息: Teleoperation, Alicia-D, 数据管线,...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://lstyimgbed.cn/Icon/transparent_100x100.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">丛雨丛雨丛</div><div class="author-info-description">柚子厨老窝</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">68</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/MzyCf"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/MzyCf" target="_blank" title="Github"><i class="fa-brands fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://github.com/MzyCf" target="_blank" title="Wechat"><i class="fa-brands fa-weixin" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/470223779" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">本站于2025/07/24正式拥有自己的域名啦8(*°▽°*) <div class="color-66ccff">https://luoshuitianyi.love</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%91%98%E8%A6%81"><span class="toc-number">1.</span> <span class="toc-text">核心摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%A7%E5%93%81%E5%8A%A8%E6%80%81"><span class="toc-number">2.</span> <span class="toc-text">产品动态</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Claude-Tag%EF%BC%9AAgent-%E5%B5%8C%E5%85%A5-Slack-%E6%88%90%E4%B8%BA%E5%9B%A2%E9%98%9F%E5%B8%B8%E9%A9%BB%E2%80%9D%E5%BC%82%E6%AD%A5%E5%90%8C%E4%BA%8B%E2%80%9D%EF%BC%8CKarpathy-%E7%A7%B0%E6%AD%A4%E4%B8%BA%E5%A4%A7%E6%A8%A1%E5%9E%8B-UI-%E7%AC%AC%E4%B8%89%E8%8C%83%E5%BC%8F"><span class="toc-number">2.1.</span> <span class="toc-text">Claude Tag：Agent 嵌入 Slack 成为团队常驻”异步同事”，Karpathy 称此为大模型 UI 第三范式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OpenAI-Daybreak-%E6%89%A9%E5%BC%A0%EF%BC%9ACodex-%E5%AE%89%E5%85%A8%E6%8F%92%E4%BB%B6-GPT-5-5-Cyber-%E5%AE%8C%E6%95%B4%E7%89%88-%E7%BD%91%E7%BB%9C%E5%90%88%E4%BD%9C%E4%BC%99%E4%BC%B4%E8%AE%A1%E5%88%92"><span class="toc-number">2.2.</span> <span class="toc-text">OpenAI Daybreak 扩张：Codex 安全插件 + GPT-5.5-Cyber 完整版 + 网络合作伙伴计划</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OpenAI-DevDay-2026-%E5%BC%80%E6%94%BE%E6%8A%A5%E5%90%8D%EF%BC%9A9-29-%E6%97%A7%E9%87%91%E5%B1%B1"><span class="toc-number">2.3.</span> <span class="toc-text">OpenAI DevDay 2026 开放报名：9&#x2F;29 旧金山</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Google-DeepMind-%E4%B8%8E-A24-%E7%94%B5%E5%BD%B1%E5%85%AC%E5%8F%B8%E5%BB%BA%E7%AB%8B%E7%A0%94%E7%A9%B6%E5%90%88%E4%BD%9C"><span class="toc-number">2.4.</span> <span class="toc-text">Google DeepMind 与 A24 电影公司建立研究合作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Google-Interactions-API-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83%EF%BC%88GA%EF%BC%89%EF%BC%9A%E8%B7%A8%E6%A8%A1%E5%9E%8B-%E8%B7%A8-Agent-%E7%9A%84%E7%BB%9F%E4%B8%80%E7%BC%96%E6%8E%92"><span class="toc-number">2.5.</span> <span class="toc-text">Google Interactions API 正式发布（GA）：跨模型&#x2F;跨 Agent 的统一编排</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ByteDance-Seedance-2-5-%E5%8F%91%E5%B8%83%EF%BC%9A30-%E7%A7%92-4K-%E8%A7%86%E9%A2%91-50-%E4%B8%AA%E5%85%A8%E6%A8%A1%E6%80%81%E5%8F%82%E8%80%83%E7%B4%A0%E6%9D%90"><span class="toc-number">2.6.</span> <span class="toc-text">ByteDance Seedance 2.5 发布：30 秒 4K 视频 + 50 个全模态参考素材</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E6%A1%86%E6%9E%B6"><span class="toc-number">3.</span> <span class="toc-text">工具框架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prime-Intellect-prime-rl-v0-6-0%EF%BC%9A%E4%B8%87%E4%BA%BF%E5%8F%82%E6%95%B0-MoE-%E7%9A%84-Agentic-RL-%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD"><span class="toc-number">3.1.</span> <span class="toc-text">Prime Intellect prime-rl v0.6.0：万亿参数 MoE 的 Agentic RL 基础设施</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Apple-container-%E9%A1%B9%E7%9B%AE%EF%BC%9ADocker-Desktop-%E5%9C%A8-Mac-%E4%B8%8A%E6%88%90%E4%B8%BA%E5%8F%AF%E9%80%89%E9%A1%B9"><span class="toc-number">3.2.</span> <span class="toc-text">Apple container 项目：Docker Desktop 在 Mac 上成为可选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Microsoft-FastContext-1-0%EF%BC%9A4B-%E4%BB%93%E5%BA%93%E6%8E%A2%E7%B4%A2%E5%AD%90-Agent%EF%BC%8C%E4%B8%BB-Agent-token-%E8%8A%82%E7%9C%81-46-5"><span class="toc-number">3.3.</span> <span class="toc-text">Microsoft FastContext-1.0：4B 仓库探索子 Agent，主 Agent token 节省 46.5%</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Modal-%E6%8E%A8%E5%87%BA%E6%89%98%E7%AE%A1%E7%A7%81%E6%9C%89-LLM-%E7%AB%AF%E7%82%B9-Latitude-%E5%8F%91%E5%B8%83-Agent-%E7%94%9F%E4%BA%A7%E7%9B%91%E6%8E%A7"><span class="toc-number">3.4.</span> <span class="toc-text">Modal 推出托管私有 LLM 端点 + Latitude 发布 Agent 生产监控</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83"><span class="toc-number">4.</span> <span class="toc-text">模型发布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mistral-OCR-4%EF%BC%9A%E7%BB%93%E6%9E%84%E5%8C%96-OCR-%E6%94%AF%E6%8C%81-170-%E7%A7%8D%E8%AF%AD%E8%A8%80%EF%BC%8C%E4%BD%86%E2%80%9D%E7%B1%BBSOTA%E2%80%9D%E5%A3%B0%E6%98%8E%E5%AD%98%E4%BA%89%E8%AE%AE"><span class="toc-number">4.1.</span> <span class="toc-text">Mistral OCR 4：结构化 OCR 支持 170 种语言，但”类SOTA”声明存争议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Krea-2-%E5%BC%80%E6%BA%90%E5%AE%8C%E6%95%B4%E6%9D%83%E9%87%8D%EF%BC%9A%E5%8F%91%E5%B8%83%E5%8E%9F%E5%A7%8B%E6%9C%AA%E8%92%B8%E9%A6%8F%E4%B8%AD%E6%9C%9F%E8%AE%AD%E7%BB%83-checkpoint"><span class="toc-number">4.2.</span> <span class="toc-text">Krea 2 开源完整权重：发布原始未蒸馏中期训练 checkpoint</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#X%E5%B9%B3%E5%8F%B0%E5%8A%A8%E6%80%81"><span class="toc-number">5.</span> <span class="toc-text">X平台动态</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Claude-Tag-%E4%B8%8E-Agent-%E6%96%B0%E8%8C%83%E5%BC%8F"><span class="toc-number">5.1.</span> <span class="toc-text">Claude Tag 与 Agent 新范式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E6%BA%90%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD"><span class="toc-number">5.2.</span> <span class="toc-text">开源模型与基础设施</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E4%B8%8E%E6%94%BF%E7%AD%96"><span class="toc-number">5.3.</span> <span class="toc-text">安全与政策</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-number">5.4.</span> <span class="toc-text">工具与工作流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D"><span class="toc-number">6.</span> <span class="toc-text">关键词</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/06/23/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-23/" title="AI资讯日报 · 2026年6月23日"><img src="/img/ai-daily-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AI资讯日报 · 2026年6月23日"/></a><div class="content"><a class="title" href="/2026/06/23/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-23/" title="AI资讯日报 · 2026年6月23日">AI资讯日报 · 2026年6月23日</a><time datetime="2026-06-23T00:00:00.000Z" title="发表于 2026-06-23 08:00:00">2026-06-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/06/18/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-18/" title="AI资讯日报 · 2026年6月18日"><img src="/img/ai-daily-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AI资讯日报 · 2026年6月18日"/></a><div class="content"><a class="title" href="/2026/06/18/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-18/" title="AI资讯日报 · 2026年6月18日">AI资讯日报 · 2026年6月18日</a><time datetime="2026-06-18T00:00:00.000Z" title="发表于 2026-06-18 08:00:00">2026-06-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/06/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0/" title="数据结构复习（期末考试）"><img src="https://lstyimgbed.cn/PicGo/cover-3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构复习（期末考试）"/></a><div class="content"><a class="title" href="/2026/06/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0/" title="数据结构复习（期末考试）">数据结构复习（期末考试）</a><time datetime="2026-06-18T00:00:00.000Z" title="发表于 2026-06-18 08:00:00">2026-06-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/06/14/%E5%A4%8D%E4%B9%A0%E6%96%87%E6%A1%A3-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" title="复习文档：机器学习（基于周志华《机器学习》西瓜书）"><img src="https://lstyimgbed.cn/PicGo/cover-3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="复习文档：机器学习（基于周志华《机器学习》西瓜书）"/></a><div class="content"><a class="title" href="/2026/06/14/%E5%A4%8D%E4%B9%A0%E6%96%87%E6%A1%A3-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" title="复习文档：机器学习（基于周志华《机器学习》西瓜书）">复习文档：机器学习（基于周志华《机器学习》西瓜书）</a><time datetime="2026-06-14T00:00:00.000Z" title="发表于 2026-06-14 08:00:00">2026-06-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/06/13/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-13/" title="AI资讯日报 · 2026年6月13日"><img src="/img/ai-daily-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AI资讯日报 · 2026年6月13日"/></a><div class="content"><a class="title" href="/2026/06/13/AI%E8%B5%84%E8%AE%AF%E6%97%A5%E6%8A%A5-2026-06-13/" title="AI资讯日报 · 2026年6月13日">AI资讯日报 · 2026年6月13日</a><time datetime="2026-06-13T00:00:00.000Z" title="发表于 2026-06-13 08:00:00">2026-06-13</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2019 - 2026 By 丛雨丛雨丛</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+  const loadMathjax = () => {
+    if (!window.MathJax) {
+      window.MathJax = {
+        loader: {
+          load: [
+            // Four font extension packages (optional)
+            //- '[tex]/bbm',
+            //- '[tex]/bboldx',
+            //- '[tex]/dsfont',
+            '[tex]/mhchem'
+          ],
+          paths: {
+            'mathjax-newcm': '[mathjax]/../@mathjax/mathjax-newcm-font',
+
+            //- // Four font extension packages (optional)
+            //- 'mathjax-bbm-extension': '[mathjax]/../@mathjax/mathjax-bbm-font-extension',
+            //- 'mathjax-bboldx-extension': '[mathjax]/../@mathjax/mathjax-bboldx-font-extension',
+            //- 'mathjax-dsfont-extension': '[mathjax]/../@mathjax/mathjax-dsfont-font-extension',
+            'mathjax-mhchem-extension': '[mathjax]/../@mathjax/mathjax-mhchem-font-extension'
+          }
+        },
+        output: {
+          font: 'mathjax-newcm',
+        },
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          tags: 'none',
+          packages: {
+            '[+]': [
+              'mhchem'
+            ]
+          }
+        },
+        chtml: {
+          scale: 1.1
+        },
+        options: {
+          enableMenu: true,
+          menuOptions: {
+            settings: {
+              enrich: false  // Turn off Braille and voice narration text automatic generation
+            }
+          },
+          renderActions: {
+            findScript: [10, doc => {
+              for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+                const display = !!node.type.match(/; *mode=display/)
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+                const text = document.createTextNode('')
+                node.parentNode.replaceChild(text, node)
+                math.start = {node: text, delim: '', n: 0}
+                math.end = {node: text, delim: '', n: 0}
+                doc.math.push(math)
+              }
+            }, '']
+          }
+        }
+      }
+
+      const script = document.createElement('script')
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax/tex-mml-chtml.min.js'
+      script.id = 'MathJax-script'
+      script.async = true
+      document.head.appendChild(script)
+    } else {
+      MathJax.startup.document.state(0)
+      MathJax.texReset()
+      MathJax.typesetPromise()
+    }
+  }
+
+  btf.addGlobalFn('encrypt', loadMathjax, 'mathjax')
+  window.pjax ? loadMathjax() : window.addEventListener('load', loadMathjax)
+})()</script></div><canvas id="universe"></canvas><script defer src="/js/universe.js"></script><script async src="/js/lib/pace-1.2.4.min.js"></script><script src="/js/lib/vue-2.6.14.min.js"></script><script src="/js/lib/element-ui-2.15.6.min.js"></script><script defer src="/js/notification.js"></script><script defer src="/js/test-notification.js"></script><script src="/js/sun_moon.js" async></script><script defer src="/js/lib/sweetalert2-8.19.0.min.js"></script><script defer src="/js/lunar.js"></script><script defer src="/js/day.js"></script><script defer src="/js/randomdoc.js"></script><script src="/js/lib/jquery-3.7.1.min.js"></script><script type="text/javascript" src="/js/rightmenu.js"></script><script defer src="/js/runtime.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      true
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="什么都搜得到哦" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/11/17/基于深度学习的python(八)/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/cover-6.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-11-17</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/11/17/基于深度学习的python(八)/&quot;);" href="javascript:void(0);" alt="">基于深度学习的python速通(六)-与学习相关的技巧</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/11/17/基于深度学习的python(八)/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/11/17/发言稿_铸就社会主义文化新辉煌/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/cover-1.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-11-17</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/11/17/发言稿_铸就社会主义文化新辉煌/&quot;);" href="javascript:void(0);" alt="">铸就社会主义文化新辉煌 —— 课上分享发言稿</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/11/17/发言稿_铸就社会主义文化新辉煌/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/11/17/基于深度学习的python(七)/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/cover-5.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-11-17</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/11/17/基于深度学习的python(七)/&quot;);" href="javascript:void(0);" alt="">基于深度学习的python速通(七)</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/11/17/基于深度学习的python(七)/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/01/27/基于深度学习的python(六)/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/cover-3.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-01-27</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/01/27/基于深度学习的python(六)/&quot;);" href="javascript:void(0);" alt="">基于深度学习的python速通(六)</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/01/27/基于深度学习的python(六)/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/08/15/娜迦Agent/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/luo-ling.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-08-15</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/08/15/娜迦Agent/&quot;);" href="javascript:void(0);" alt="">娜迦Agent</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/08/15/娜迦Agent/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/01/27/基于深度学习的python(五)/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/cover-2.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-01-27</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/01/27/基于深度学习的python(五)/&quot;);" href="javascript:void(0);" alt="">基于深度学习的python速通(五)</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/01/27/基于深度学习的python(五)/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/06/27/web前端开发实验记录/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/0831miku.00_03_33_58.Still002.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-06-27</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/06/27/web前端开发实验记录/&quot;);" href="javascript:void(0);" alt="">web前端开发实验记录</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/06/27/web前端开发实验记录/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/06/27/窝点精装修记录/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/miku2_1.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-06-27</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/06/27/窝点精装修记录/&quot;);" href="javascript:void(0);" alt="">窝点精装修记录</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/06/27/窝点精装修记录/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/09/08/基于深度学习的python(一)/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/cover-1.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-09-08</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/09/08/基于深度学习的python(一)/&quot;);" href="javascript:void(0);" alt="">基于深度学习的python速通(一)</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/09/08/基于深度学习的python(一)/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/09/08/python程序设计/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/Luo.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-09-08</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/09/08/python程序设计/&quot;);" href="javascript:void(0);" alt="">python程序设计</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/09/08/python程序设计/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/08/15/计算机图形学/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/ling-luo.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-08-15</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/08/15/计算机图形学/&quot;);" href="javascript:void(0);" alt="">N天慢通计算机图形学</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/08/15/计算机图形学/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/06/26/无限共鸣北京场/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/QQ图片20250722230353.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-06-26</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/06/26/无限共鸣北京场/&quot;);" href="javascript:void(0);" alt="">洛天依2025「无限共鸣·流光协奏」全息巡回演唱会北京场</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/06/26/无限共鸣北京场/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/06/26/我的第一篇文章/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/0831miku.00_03_33_58.Still002.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-06-26</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/06/26/我的第一篇文章/&quot;);" href="javascript:void(0);" alt="">我的第一篇文章</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/06/26/我的第一篇文章/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2025/08/15/Hexo-LaTeX支持方案/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="https://lstyimgbed.cn/PicGo/ling-luo.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-08-15</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2025/08/15/Hexo-LaTeX支持方案/&quot;);" href="javascript:void(0);" alt="">Hexo 框架 LaTeX 数学公式支持解决方案</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2025/08/15/Hexo-LaTeX支持方案/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__fadeIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '500ms');
+    arr[i].setAttribute('data-wow-offset', '100');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__fadeIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('pagination');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__fadeIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><script data-pjax>
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(/img/shanchahua.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/资讯/&quot;);" href="javascript:void(0);">资讯</a><span class="categoryBar-list-count">10</span><span class="categoryBar-list-descr">任务罢了</span></li><li class="categoryBar-list-item" style="background:url(/img/juhua.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/记录/&quot;);" href="javascript:void(0);">记录</a><span class="categoryBar-list-count">11</span><span class="categoryBar-list-descr">精装修的记录就在这里啦</span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/挖坑/&quot;);" href="javascript:void(0);">挖坑</a><span class="categoryBar-list-count">7</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/展示页/&quot;);" href="javascript:void(0);">展示页</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/电子技术/&quot;);" href="javascript:void(0);">电子技术</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/推一辈子中v好吗/&quot;);" href="javascript:void(0);">推一辈子中v好吗</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><!-- hexo injector body_end end --></body></html>
